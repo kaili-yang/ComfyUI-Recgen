@@ -12,7 +12,29 @@ authors = [
 readme = "README.md"
 license = {text = "GNU General Public License v3"}
 requires-python = ">=3.10"
-classifiers = []
+keywords = [
+  "comfyui",
+  "comfyui-nodes",
+  "recgen",
+  "image-to-3d",
+  "rgb-d",
+  "3d-reconstruction",
+  "gaussian-splatting",
+  "mesh-generation",
+  "depth-map",
+  "single-view-3d",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Multimedia :: Graphics :: 3D Modeling",
+]
 dependencies = [
     "torch>=2.0",
     "torchvision",
@@ -54,7 +76,7 @@ Documentation = "https://github.com/kaili-yang/ComfyUI-Recgen#readme"
 PublisherId = "kaili-yang"
 DisplayName = "ComfyUI-Recgen"
 Icon = ""
-Tags = ["3d", "recgen", "image-to-3d"]
+Tags = ["3d", "recgen", "image-to-3d", "rgb-d", "mesh", "gaussian-splat", "comfyui", "depth"]
 Repository = "https://github.com/kaili-yang/ComfyUI-Recgen"
 
 includes = []

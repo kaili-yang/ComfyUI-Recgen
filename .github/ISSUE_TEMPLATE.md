@@ -1,15 +1,22 @@
-* comfyui_recgen version:
+* ComfyUI-Recgen version / commit:
+* ComfyUI version:
+* recgen (TRI-ML/RecGen) version / commit:
 * Python version:
+* PyTorch version:
+* Device (cuda / mps / cpu):
 * Operating System:
 
 ### Description
 
-Describe what you were trying to get done.
-Tell us what happened, what went wrong, and what you expected to happen.
+What you tried to do, what happened, and what you expected.
 
-### What I Did
+### Steps to reproduce
+
+1.
+2.
+
+### Logs
 
 ```
-Paste the command(s) you ran and the output.
-If there was a crash, please include the traceback here.
+Paste traceback or console output here.
 ```
