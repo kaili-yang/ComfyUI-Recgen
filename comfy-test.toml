@@ -1,0 +1,38 @@
+# comfy-test — https://github.com/PozzettiAndrea/comfy-test
+# Run locally: cd ComfyUI-Recgen && comfy-test run --platform macos
+# Quick check: comfy-test run --level registration
+
+[test]
+comfyui_version = "latest"
+python_version = "3.11"
+# Full inference is GPU-heavy; CI/CPU runs stop before EXECUTION.
+levels = [
+  "syntax",
+  "install",
+  "registration",
+  "instantiation",
+  "static_capture",
+  "validation",
+]
+
+[test.platforms]
+linux = true
+macos = true
+windows = true
+windows_portable = false
+
+[test.workflows]
+timeout = 300
+# Lightweight: load bundled example RGB only (no RecGen weights).
+cpu = ["load_example_preview.json"]
+# Full 2D→3D smoke — self-hosted GPU runners only (downloads HF weights).
+gpu = ["recgen_smoke.json"]
+
+[test.macos]
+enabled = true
+
+[test.linux]
+enabled = true
+
+[test.windows]
+enabled = true

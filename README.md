@@ -7,6 +7,7 @@ Use this extension when you want **image-to-3D** or **RGB-D to 3D** inside **Com
 | | |
 |---|---|
 | **License** | GPL-3.0 |
+| **CI test report** | [comfy-test results](https://kaili-yang.github.io/ComfyUI-Recgen/#main/linux-cpu) (updates after Actions publish to `gh-pages`) |
 | **AI / LLM summary** | [llms.txt](llms.txt) · [full context](docs/llms-full.md) |
 
 ## Features

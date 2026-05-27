@@ -31,10 +31,27 @@ if EXTERNAL_DRIVE.exists():
         f"{external_cache}"
     )
 
-# Add recgen root to sys.path so we can import recgen_inference
-PARENT_DIR = Path(__file__).resolve().parent.parent.parent.parent
-recgen_path = PARENT_DIR / "recgen"
-if recgen_path.exists() and str(recgen_path) not in sys.path:
+# ComfyUI-Recgen package root (…/ComfyUI-Recgen)
+NODE_ROOT = Path(__file__).resolve().parents[2]
+# Legacy: parent of custom_nodes (used for outputs when folder_paths missing)
+PARENT_DIR = Path(__file__).resolve().parents[3]
+
+
+def _resolve_recgen_root() -> Path | None:
+    """Find TRI-ML RecGen checkout (vendor install or workspace sibling)."""
+    candidates = [
+        NODE_ROOT / "vendor" / "recgen",
+        NODE_ROOT.parent.parent.parent / "recgen",
+        NODE_ROOT.parent / "recgen",
+    ]
+    for path in candidates:
+        if (path / "recgen_inference").is_dir():
+            return path
+    return None
+
+
+recgen_path = _resolve_recgen_root()
+if recgen_path is not None and str(recgen_path) not in sys.path:
     sys.path.insert(0, str(recgen_path))
 
 # Set environment variables for spconv, attention, and opengl
@@ -68,16 +85,16 @@ def _activate_pipeline_device(pipeline, device: str) -> str:
         try:
             if hasattr(torch.mps, "empty_cache"):
                 torch.mps.empty_cache()
-            pipeline.to("mps")
+            pipeline.to(runtime)
             print("[ComfyUI-Recgen] Pipeline active on MPS.")
-            return "mps"
+            return runtime
         except Exception as exc:
             print(f"[ComfyUI-Recgen] MPS activation failed ({exc}); using CPU.")
             pipeline.to("cpu")
             return "cpu"
     if runtime == "cuda":
-        pipeline.to("cuda")
-        return "cuda"
+        pipeline.to(runtime)
+        return runtime
     pipeline.to("cpu")
     return "cpu"
 
@@ -101,8 +118,8 @@ class RecGenLoadExampleInputs:
     @classmethod
     def INPUT_TYPES(cls):
         examples = []
-        recgen_examples = PARENT_DIR / "recgen" / "examples"
-        if recgen_examples.is_dir():
+        recgen_examples = (recgen_path / "examples") if recgen_path else None
+        if recgen_examples and recgen_examples.is_dir():
             for idx in range(16):
                 if (recgen_examples / f"ex{idx}_rgb.png").exists():
                     examples.append(f"ex{idx}")
@@ -128,7 +145,11 @@ class RecGenLoadExampleInputs:
     CATEGORY = "RecGen"
 
     def load_example(self, example):
-        recgen_examples = PARENT_DIR / "recgen" / "examples"
+        if recgen_path is None:
+            raise FileNotFoundError(
+                "RecGen not found. Run install.py or place recgen next to ComfyUI-Recgen."
+            )
+        recgen_examples = recgen_path / "examples"
         intrinsics_path = recgen_examples / "intrinsics.yaml"
         rgb_path = recgen_examples / f"{example}_rgb.png"
         depth_path = recgen_examples / f"{example}_depth.png"

@@ -1,0 +1,3 @@
+# RecGen2DTo3D loads large checkpoints and prefers CUDA/MPS.
+[cuda]
+packages = ["spconv", "flash_attn", "nvdiffrast"]

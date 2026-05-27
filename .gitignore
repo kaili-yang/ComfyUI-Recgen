@@ -90,6 +90,9 @@ docs/_build/
 # PyBuilder
 target/
 
+# RecGen vendor clone (install.py)
+vendor/
+
 # Cookiecutter
 output/
 python_boilerplate/

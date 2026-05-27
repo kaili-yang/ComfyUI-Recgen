@@ -30,7 +30,7 @@ ComfyUI-Recgen/
 
 ## Hard dependency
 
-RecGen inference lives in a **sibling** `recgen/` repo (`recgen_inference` package). Do not vendor it into this repo without an explicit user request. `nodes.py` adds `PARENT_DIR/recgen` to `sys.path`.
+RecGen inference (`recgen_inference`) is resolved from `vendor/recgen` (via `install.py`), a workspace sibling `recgen/`, or `custom_nodes/recgen`. `install.py` clones into `vendor/recgen` so ComfyUI does not treat RecGen as a custom-node pack.
 
 ## Conventions
 
@@ -54,6 +54,21 @@ pytest tests/test_comfyui_recgen.py -q
 # Full smoke (downloads weights, slow):
 python3 tests/test_run_node.py
 ```
+
+### comfy-test (ComfyUI install + registration + workflows)
+
+Requires [comfy-test](https://github.com/PozzettiAndrea/comfy-test) and path env vars:
+
+```bash
+export COMFY_TEST_LOGS_DIR=~/comfy-test-logs
+export COMFY_TEST_WORKSPACE_DIR=~/test_workspaces
+cd ComfyUI-Recgen
+comfy-test run --level registration    # syntax + install + node registration
+comfy-test run --level validation      # + workflow validation (load_example_preview.json)
+comfy-test run --gpu --level execution # full RecGen smoke (GPU only)
+```
+
+Config: `comfy-test.toml`, workflows in `workflows/`, `install.py` clones `TRI-ML/RecGen` into `vendor/recgen`.
 
 ## GEO / documentation
 
