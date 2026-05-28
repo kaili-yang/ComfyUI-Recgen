@@ -102,6 +102,7 @@ jobs:
           mkdir -p gh-pages
           TARGET="gh-pages/$BRANCH"
           mkdir -p "$TARGET"
+          COPIED_COUNT=0
           for dir in artifacts/results-*; do
             [ -d "$dir" ] || continue
             PLATFORM_ID=$(basename "$dir" | sed 's/results-//')
@@ -113,10 +114,15 @@ jobs:
             if [ -n "$RESULTS_JSON" ]; then
               SRC=$(dirname "$RESULTS_JSON")
               cp -r "$SRC"/. "$DEST/"
+              COPIED_COUNT=$((COPIED_COUNT + 1))
             else
               echo "Skipping $PLATFORM_ID: no results.json"
             fi
           done
+          if [ "$COPIED_COUNT" -eq 0 ]; then
+            echo "No results.json found in any artifact; refusing to publish empty report site."
+            exit 1
+          fi
           touch gh-pages/.nojekyll
       - name: Generate index pages
         run: |
