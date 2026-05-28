@@ -6,6 +6,13 @@ on:
   pull_request:
     branches: [main, master]
 
+# Required for comfy-test to push the gh-pages branch (report site).
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   test:
     uses: PozzettiAndrea/comfy-test/.github/workflows/test-matrix.yml@main
+    secrets: inherit

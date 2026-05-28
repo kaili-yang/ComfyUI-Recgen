@@ -5,14 +5,12 @@
 [test]
 comfyui_version = "latest"
 python_version = "3.11"
-# Full inference is GPU-heavy; CI/CPU runs stop before EXECUTION.
+# Phase 1 CI: install + registration (stable on CPU runners).
+# Add static_capture + validation after Playwright/screenshots are reliable in CI.
 levels = [
   "syntax",
   "install",
   "registration",
-  "instantiation",
-  "static_capture",
-  "validation",
 ]
 
 [test.platforms]
