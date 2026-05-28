@@ -1,27 +1,27 @@
 {
-  "timestamp": "2026-05-28T19:30:36.458643+00:00",
+  "timestamp": "2026-05-28T23:40:28.921236+00:00",
   "platform": "windows",
   "hardware": {
     "os": "Windows-10-10.0.26100-SP0",
-    "cpu": "AMD64 Family 25 Model 1 Stepping 1, AuthenticAMD"
+    "cpu": "AMD64 Family 25 Model 17 Stepping 1, AuthenticAMD"
   },
-  "commit_hash": "64660dd430e8b4496ad4879fef7f803cf1592111",
+  "commit_hash": "3fb16edc480f8db7237795acb397c350d152c1ef",
   "run_url": null,
   "success": true,
   "summary": {
-    "total": 2,
-    "passed": 1,
+    "total": 3,
+    "passed": 2,
     "failed": 0
   },
   "workflows": [
     {
       "name": "load_example_preview",
       "status": "pass",
-      "duration_seconds": 8.7,
+      "duration_seconds": 8.73,
       "error": null,
       "hardware": {
         "os": "Windows-10-10.0.26100-SP0",
-        "cpu": "AMD64 Family 25 Model 1 Stepping 1, AuthenticAMD"
+        "cpu": "AMD64 Family 25 Model 17 Stepping 1, AuthenticAMD"
       },
       "resources": {
         "ram": {
@@ -38,6 +38,24 @@
       "duration_seconds": 0,
       "error": "Not configured for CPU runner",
       "hardware": null
+    },
+    {
+      "name": "preview3d_cube",
+      "status": "pass",
+      "duration_seconds": 5.97,
+      "error": null,
+      "hardware": {
+        "os": "Windows-10-10.0.26100-SP0",
+        "cpu": "AMD64 Family 25 Model 17 Stepping 1, AuthenticAMD"
+      },
+      "resources": {
+        "ram": {
+          "peak": 0.53,
+          "avg": 0.53
+        },
+        "total_ram_gb": 16.0,
+        "samples": 6
+      }
     }
   ]
 }

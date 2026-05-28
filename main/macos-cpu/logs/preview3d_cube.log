@@ -1,0 +1,16 @@
+  [ComfyUI] [32m[INFO][0m Using RAM pressure cache.
+  [ComfyUI] [32m[INFO][0m Using RAM pressure cache.
+Loading workflow from /Users/runner/work/ComfyUI-Recgen/ComfyUI-Recgen/workflows/tests/preview3d_cube.json...
+Converting litegraph workflow to prompt format...
+Queuing workflow: /Users/runner/work/ComfyUI-Recgen/ComfyUI-Recgen/workflows/tests/preview3d_cube.json...
+[DEBUG] Connecting WebSocket to ws://127.0.0.1:41894/ws?clientId=4d66b2b8-e283-4c4e-8b9c-69fd9d071555
+[DEBUG] WebSocket connected successfully
+  [ComfyUI] [32m[INFO][0m got prompt
+  [ComfyUI] [32m[INFO][0m got prompt
+Queued with ID: 14f6298a-71ea-4198-8703-9fb7020530d7
+[DEBUG] WS msg: type=status prompt_id=None (waiting for 14f6298a-71ea-4198-8703-9fb7020530d7)
+Execution complete (queue empty)
+  [ComfyUI] [32m[INFO][0m [32mPrompt executed in 0.01 seconds[0m
+  [ComfyUI] [32m[INFO][0m [32mPrompt executed in 0.01 seconds[0m
+Workflow completed successfully!
+    Saved screenshot: preview3d_cube_executed.png

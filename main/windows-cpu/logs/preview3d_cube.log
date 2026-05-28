@@ -1,0 +1,23 @@
+Loading workflow from D:\a\ComfyUI-Recgen\ComfyUI-Recgen\workflows\tests\preview3d_cube.json...
+Converting litegraph workflow to prompt format...
+  [ComfyUI] [32m[INFO][0m Using RAM pressure cache.
+  [ComfyUI] [32m[INFO][0m Using RAM pressure cache.
+Queuing workflow: D:\a\ComfyUI-Recgen\ComfyUI-Recgen\workflows\tests\preview3d_cube.json...
+[DEBUG] Connecting WebSocket to ws://127.0.0.1:41890/ws?clientId=79886804-cc04-49c0-978f-8280ead4b63b
+[DEBUG] WebSocket connected successfully
+Queued with ID: 9e063093-1377-4e67-95e9-85cd2da75d2a
+  [ComfyUI] [32m[INFO][0m got prompt
+  [ComfyUI] [32m[INFO][0m got prompt
+[DEBUG] WS msg: type=status prompt_id=None (waiting for 9e063093-1377-4e67-95e9-85cd2da75d2a)
+[DEBUG] WS msg: type=status prompt_id=None (waiting for 9e063093-1377-4e67-95e9-85cd2da75d2a)
+[DEBUG] WS msg: type=status prompt_id=None (waiting for 9e063093-1377-4e67-95e9-85cd2da75d2a)
+[DEBUG] WS msg: type=progress_state prompt_id=9e063093-1377-4e67-95e9-85cd2da75d2a (waiting for 9e063093-1377-4e67-95e9-85cd2da75d2a)
+[DEBUG] Unhandled msg_type: progress_state
+[DEBUG] WS msg: type=progress_state prompt_id=9e063093-1377-4e67-95e9-85cd2da75d2a (waiting for 9e063093-1377-4e67-95e9-85cd2da75d2a)
+[DEBUG] Unhandled msg_type: progress_state
+[DEBUG] WS msg: type=status prompt_id=None (waiting for 9e063093-1377-4e67-95e9-85cd2da75d2a)
+  [ComfyUI] [32m[INFO][0m [32mPrompt executed in 0.01 seconds[0m
+  [ComfyUI] [32m[INFO][0m [32mPrompt executed in 0.01 seconds[0m
+Execution complete (queue empty)
+Workflow completed successfully!
+    Saved screenshot: preview3d_cube_executed.png

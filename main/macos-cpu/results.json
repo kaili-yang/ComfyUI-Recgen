@@ -1,23 +1,23 @@
 {
-  "timestamp": "2026-05-28T19:29:12.011811+00:00",
+  "timestamp": "2026-05-28T23:39:09.706959+00:00",
   "platform": "macos",
   "hardware": {
     "os": "macOS-15.7.7-arm64-arm-64bit",
     "cpu": "arm"
   },
-  "commit_hash": "64660dd430e8b4496ad4879fef7f803cf1592111",
+  "commit_hash": "3fb16edc480f8db7237795acb397c350d152c1ef",
   "run_url": null,
   "success": true,
   "summary": {
-    "total": 2,
-    "passed": 1,
+    "total": 3,
+    "passed": 2,
     "failed": 0
   },
   "workflows": [
     {
       "name": "load_example_preview",
       "status": "pass",
-      "duration_seconds": 6.93,
+      "duration_seconds": 11.23,
       "error": null,
       "hardware": {
         "os": "macOS-15.7.7-arm64-arm-64bit",
@@ -25,11 +25,11 @@
       },
       "resources": {
         "ram": {
-          "peak": 0.66,
-          "avg": 0.64
+          "peak": 0.67,
+          "avg": 0.66
         },
         "total_ram_gb": 7.0,
-        "samples": 7
+        "samples": 11
       }
     },
     {
@@ -38,6 +38,24 @@
       "duration_seconds": 0,
       "error": "Not configured for CPU runner",
       "hardware": null
+    },
+    {
+      "name": "preview3d_cube",
+      "status": "pass",
+      "duration_seconds": 6.38,
+      "error": null,
+      "hardware": {
+        "os": "macOS-15.7.7-arm64-arm-64bit",
+        "cpu": "arm"
+      },
+      "resources": {
+        "ram": {
+          "peak": 0.67,
+          "avg": 0.67
+        },
+        "total_ram_gb": 7.0,
+        "samples": 6
+      }
     }
   ]
 }

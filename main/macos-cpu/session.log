@@ -1,6 +1,6 @@
-[00:00] Crash dump logging enabled: /Users/runner/work/_temp/comfy-test-logs/Recgen-1927/main/macos-cpu/crash_dump.log
+[00:00] Crash dump logging enabled: /Users/runner/work/_temp/comfy-test-logs/Recgen-2337/main/macos-cpu/crash_dump.log
 [00:00] 
-[00:00] [1/4] SYNTAX
+[00:00] [1/5] SYNTAX
 [00:00] ----------------------------------------
 [00:00] 
 [DEBUG] server=None, api=None
@@ -9,255 +9,275 @@
 [00:00] Forbidden patterns check: OK
 [00:00] [SYNTAX] PASSED
 [00:00] 
-[00:00] [2/4] INSTALL
+[00:00] [2/5] INSTALL
 [00:00] ----------------------------------------
 [00:00] 
 [DEBUG] server=None, api=None
 [00:00] 
 Setting up ComfyUI...
 [00:00] Cloning ComfyUI (latest)...
-[00:00] Running: git clone --depth 1 https://github.com/comfyanonymous/ComfyUI.git /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/ComfyUI
+[00:00] Running: git clone --depth 1 https://github.com/comfyanonymous/ComfyUI.git /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/ComfyUI
 [00:01] Creating virtual environment...
-[00:01] Running: /Library/Frameworks/Python.framework/Versions/3.11/bin/python -m venv /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv
+[00:01] Running: /Library/Frameworks/Python.framework/Versions/3.11/bin/python -m venv /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv
 [00:03] Installing uv into venv...
-[00:03] Running: /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/bin/python -m pip install uv
+[00:03] Running: /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/bin/python -m pip install uv
 [00:04] Installing PyTorch...
 [00:04] Pinning torch family: torch==2.10.0 torchvision==0.25.0 torchaudio==2.10.0
-[00:04] Running: /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/bin/python -m uv pip install torch==2.10.0 torchvision==0.25.0 torchaudio==2.10.0
-[00:08] Installing ComfyUI requirements...
-[00:08] Running: /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/bin/python -m uv pip install -r /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/ComfyUI/requirements.txt
-[00:12] 
+[00:04] Running: /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/bin/python -m uv pip install torch==2.10.0 torchvision==0.25.0 torchaudio==2.10.0
+[00:10] Installing ComfyUI requirements...
+[00:10] Running: /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/bin/python -m uv pip install -r /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/ComfyUI/requirements.txt
+[00:16] 
 Installing custom node...
-[00:12] Copying ComfyUI-Recgen to custom_nodes/...
-[00:12] 
+[00:16] Copying ComfyUI-Recgen to custom_nodes/...
+[00:16] 
 Running install.py...
-[00:12] Running: /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/bin/python /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/ComfyUI/custom_nodes/ComfyUI-Recgen/install.py
-[00:14]   Obtaining file:///Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/ComfyUI/custom_nodes/ComfyUI-Recgen
-[00:14]     Installing build dependencies: started
-[00:15]     Installing build dependencies: finished with status 'done'
-[00:15]     Checking if build backend supports build_editable: started
-[00:16]     Checking if build backend supports build_editable: finished with status 'done'
-[00:16]     Getting requirements to build editable: started
-[00:16]     Getting requirements to build editable: finished with status 'done'
-[00:16]     Preparing editable metadata (pyproject.toml): started
-[00:16]     Preparing editable metadata (pyproject.toml): finished with status 'done'
-[00:16]   Requirement already satisfied: torch>=2.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from comfyui_recgen==0.0.1) (2.10.0)
-[00:16]   Requirement already satisfied: torchvision in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from comfyui_recgen==0.0.1) (0.25.0)
-[00:16]   Requirement already satisfied: numpy in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from comfyui_recgen==0.0.1) (2.4.6)
-[00:16]   Requirement already satisfied: scipy in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from comfyui_recgen==0.0.1) (1.17.1)
-[00:16]   Requirement already satisfied: Pillow in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from comfyui_recgen==0.0.1) (12.2.0)
-[00:16]   Collecting trimesh (from comfyui_recgen==0.0.1)
-[00:16]     Downloading trimesh-4.12.2-py3-none-any.whl.metadata (13 kB)
-[00:16]   Requirement already satisfied: safetensors in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from comfyui_recgen==0.0.1) (0.7.0)
-[00:16]   Requirement already satisfied: huggingface-hub in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from comfyui_recgen==0.0.1) (1.17.0)
-[00:16]   Collecting easydict (from comfyui_recgen==0.0.1)
-[00:16]     Downloading easydict-1.13-py3-none-any.whl.metadata (4.2 kB)
-[00:16]   Requirement already satisfied: tqdm in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from comfyui_recgen==0.0.1) (4.67.3)
-[00:16]   Collecting plyfile (from comfyui_recgen==0.0.1)
-[00:16]     Downloading plyfile-1.1.3-py3-none-any.whl.metadata (43 kB)
-[00:16]        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.3/43.3 kB 5.9 MB/s eta 0:00:00
-[00:16]   Collecting opencv-python-headless (from comfyui_recgen==0.0.1)
-[00:16]     Downloading opencv_python_headless-4.13.0.92-cp37-abi3-macosx_13_0_arm64.whl.metadata (19 kB)
-[00:16]   Requirement already satisfied: PyYAML in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from comfyui_recgen==0.0.1) (6.0.3)
-[00:16]   Requirement already satisfied: certifi in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from comfyui_recgen==0.0.1) (2026.5.20)
-[00:16]   Requirement already satisfied: transformers in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from comfyui_recgen==0.0.1) (5.9.0)
-[00:16]   Requirement already satisfied: filelock in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from torch>=2.0->comfyui_recgen==0.0.1) (3.29.0)
-[00:16]   Requirement already satisfied: typing-extensions>=4.10.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from torch>=2.0->comfyui_recgen==0.0.1) (4.15.0)
-[00:16]   Requirement already satisfied: sympy>=1.13.3 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from torch>=2.0->comfyui_recgen==0.0.1) (1.14.0)
-[00:16]   Requirement already satisfied: networkx>=2.5.1 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from torch>=2.0->comfyui_recgen==0.0.1) (3.6.1)
-[00:16]   Requirement already satisfied: jinja2 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from torch>=2.0->comfyui_recgen==0.0.1) (3.1.6)
-[00:16]   Requirement already satisfied: fsspec>=0.8.5 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from torch>=2.0->comfyui_recgen==0.0.1) (2026.4.0)
-[00:16]   Requirement already satisfied: click>=8.4.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from huggingface-hub->comfyui_recgen==0.0.1) (8.4.1)
-[00:16]   Requirement already satisfied: hf-xet<2.0.0,>=1.4.3 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from huggingface-hub->comfyui_recgen==0.0.1) (1.5.0)
-[00:16]   Requirement already satisfied: httpx<1,>=0.23.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from huggingface-hub->comfyui_recgen==0.0.1) (0.28.1)
-[00:16]   Requirement already satisfied: packaging>=20.9 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from huggingface-hub->comfyui_recgen==0.0.1) (26.2)
-[00:16]   Requirement already satisfied: typer<0.26.0,>=0.20.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from huggingface-hub->comfyui_recgen==0.0.1) (0.25.1)
-[00:16]   Requirement already satisfied: regex>=2025.10.22 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from transformers->comfyui_recgen==0.0.1) (2026.5.9)
-[00:16]   Requirement already satisfied: tokenizers<=0.23.0,>=0.22.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from transformers->comfyui_recgen==0.0.1) (0.22.2)
-[00:16]   Requirement already satisfied: anyio in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from httpx<1,>=0.23.0->huggingface-hub->comfyui_recgen==0.0.1) (4.13.0)
-[00:16]   Requirement already satisfied: httpcore==1.* in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from httpx<1,>=0.23.0->huggingface-hub->comfyui_recgen==0.0.1) (1.0.9)
-[00:16]   Requirement already satisfied: idna in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from httpx<1,>=0.23.0->huggingface-hub->comfyui_recgen==0.0.1) (3.17)
-[00:16]   Requirement already satisfied: h11>=0.16 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from httpcore==1.*->httpx<1,>=0.23.0->huggingface-hub->comfyui_recgen==0.0.1) (0.16.0)
-[00:16]   Requirement already satisfied: mpmath<1.4,>=1.1.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from sympy>=1.13.3->torch>=2.0->comfyui_recgen==0.0.1) (1.3.0)
-[00:16]   Requirement already satisfied: shellingham>=1.3.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from typer<0.26.0,>=0.20.0->huggingface-hub->comfyui_recgen==0.0.1) (1.5.4)
-[00:16]   Requirement already satisfied: rich>=13.8.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from typer<0.26.0,>=0.20.0->huggingface-hub->comfyui_recgen==0.0.1) (15.0.0)
-[00:16]   Requirement already satisfied: annotated-doc>=0.0.2 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from typer<0.26.0,>=0.20.0->huggingface-hub->comfyui_recgen==0.0.1) (0.0.4)
-[00:16]   Requirement already satisfied: MarkupSafe>=2.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from jinja2->torch>=2.0->comfyui_recgen==0.0.1) (3.0.3)
-[00:16]   Requirement already satisfied: markdown-it-py>=2.2.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from rich>=13.8.0->typer<0.26.0,>=0.20.0->huggingface-hub->comfyui_recgen==0.0.1) (4.2.0)
-[00:16]   Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from rich>=13.8.0->typer<0.26.0,>=0.20.0->huggingface-hub->comfyui_recgen==0.0.1) (2.20.0)
-[00:16]   Requirement already satisfied: mdurl~=0.1 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from markdown-it-py>=2.2.0->rich>=13.8.0->typer<0.26.0,>=0.20.0->huggingface-hub->comfyui_recgen==0.0.1) (0.1.2)
-[00:16]   Downloading easydict-1.13-py3-none-any.whl (6.8 kB)
-[00:16]   Downloading opencv_python_headless-4.13.0.92-cp37-abi3-macosx_13_0_arm64.whl (46.2 MB)
-[00:17]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.2/46.2 MB 128.7 MB/s eta 0:00:00
-[00:17]   Downloading plyfile-1.1.3-py3-none-any.whl (36 kB)
-[00:17]   Downloading trimesh-4.12.2-py3-none-any.whl (741 kB)
-[00:17]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 741.0/741.0 kB 106.7 MB/s eta 0:00:00
-[00:17]   Building wheels for collected packages: comfyui_recgen
-[00:17]     Building editable for comfyui_recgen (pyproject.toml): started
-[00:17]     Building editable for comfyui_recgen (pyproject.toml): finished with status 'done'
-[00:17]     Created wheel for comfyui_recgen: filename=comfyui_recgen-0.0.1-0.editable-py3-none-any.whl size=16100 sha256=95f88a745a43899e9ba8648273c851cc2f3f96f893be139e77eae9f802f3d04e
-[00:17]     Stored in directory: /private/var/folders/p8/qyz0lmpd2mld64f_f4c66y4c0000gn/T/pip-ephem-wheel-cache-stbmpv5v/wheels/67/f9/1d/f67b9fa16dd48e061ae4fb59b6f22289e77741bcb8ba964702
-[00:17]   Successfully built comfyui_recgen
-[00:17]   Installing collected packages: easydict, trimesh, plyfile, opencv-python-headless, comfyui_recgen
-[00:18]   Successfully installed comfyui_recgen-0.0.1 easydict-1.13 opencv-python-headless-4.13.0.92 plyfile-1.1.3 trimesh-4.12.2
-[00:18]   Obtaining file:///Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/ComfyUI/custom_nodes/ComfyUI-Recgen/vendor/recgen
-[00:18]     Installing build dependencies: started
+[00:16] Running: /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/bin/python /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/ComfyUI/custom_nodes/ComfyUI-Recgen/install.py
+[00:17]   Obtaining file:///Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/ComfyUI/custom_nodes/ComfyUI-Recgen
+[00:17]     Installing build dependencies: started
 [00:19]     Installing build dependencies: finished with status 'done'
 [00:19]     Checking if build backend supports build_editable: started
-[00:19]     Checking if build backend supports build_editable: finished with status 'done'
-[00:19]     Getting requirements to build editable: started
+[00:20]     Checking if build backend supports build_editable: finished with status 'done'
+[00:20]     Getting requirements to build editable: started
 [00:20]     Getting requirements to build editable: finished with status 'done'
 [00:20]     Preparing editable metadata (pyproject.toml): started
 [00:20]     Preparing editable metadata (pyproject.toml): finished with status 'done'
-[00:20]   Requirement already satisfied: torch>=2.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from recgen_inference==0.1.0) (2.10.0)
-[00:20]   Requirement already satisfied: torchvision in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from recgen_inference==0.1.0) (0.25.0)
-[00:20]   Requirement already satisfied: numpy in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from recgen_inference==0.1.0) (2.4.6)
-[00:20]   Requirement already satisfied: scipy in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from recgen_inference==0.1.0) (1.17.1)
-[00:20]   Requirement already satisfied: Pillow in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from recgen_inference==0.1.0) (12.2.0)
-[00:20]   Requirement already satisfied: trimesh in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from recgen_inference==0.1.0) (4.12.2)
-[00:20]   Requirement already satisfied: safetensors in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from recgen_inference==0.1.0) (0.7.0)
-[00:20]   Requirement already satisfied: huggingface-hub in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from recgen_inference==0.1.0) (1.17.0)
-[00:20]   Requirement already satisfied: easydict in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from recgen_inference==0.1.0) (1.13)
-[00:20]   Requirement already satisfied: tqdm in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from recgen_inference==0.1.0) (4.67.3)
-[00:20]   Requirement already satisfied: plyfile in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from recgen_inference==0.1.0) (1.1.3)
-[00:20]   Requirement already satisfied: opencv-python-headless in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from recgen_inference==0.1.0) (4.13.0.92)
-[00:20]   Requirement already satisfied: filelock in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from torch>=2.0->recgen_inference==0.1.0) (3.29.0)
-[00:20]   Requirement already satisfied: typing-extensions>=4.10.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from torch>=2.0->recgen_inference==0.1.0) (4.15.0)
-[00:20]   Requirement already satisfied: sympy>=1.13.3 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from torch>=2.0->recgen_inference==0.1.0) (1.14.0)
-[00:20]   Requirement already satisfied: networkx>=2.5.1 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from torch>=2.0->recgen_inference==0.1.0) (3.6.1)
-[00:20]   Requirement already satisfied: jinja2 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from torch>=2.0->recgen_inference==0.1.0) (3.1.6)
-[00:20]   Requirement already satisfied: fsspec>=0.8.5 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from torch>=2.0->recgen_inference==0.1.0) (2026.4.0)
-[00:20]   Requirement already satisfied: click>=8.4.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from huggingface-hub->recgen_inference==0.1.0) (8.4.1)
-[00:20]   Requirement already satisfied: hf-xet<2.0.0,>=1.4.3 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from huggingface-hub->recgen_inference==0.1.0) (1.5.0)
-[00:20]   Requirement already satisfied: httpx<1,>=0.23.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from huggingface-hub->recgen_inference==0.1.0) (0.28.1)
-[00:20]   Requirement already satisfied: packaging>=20.9 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from huggingface-hub->recgen_inference==0.1.0) (26.2)
-[00:20]   Requirement already satisfied: pyyaml>=5.1 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from huggingface-hub->recgen_inference==0.1.0) (6.0.3)
-[00:20]   Requirement already satisfied: typer<0.26.0,>=0.20.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from huggingface-hub->recgen_inference==0.1.0) (0.25.1)
-[00:20]   Requirement already satisfied: anyio in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from httpx<1,>=0.23.0->huggingface-hub->recgen_inference==0.1.0) (4.13.0)
-[00:20]   Requirement already satisfied: certifi in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from httpx<1,>=0.23.0->huggingface-hub->recgen_inference==0.1.0) (2026.5.20)
-[00:20]   Requirement already satisfied: httpcore==1.* in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from httpx<1,>=0.23.0->huggingface-hub->recgen_inference==0.1.0) (1.0.9)
-[00:20]   Requirement already satisfied: idna in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from httpx<1,>=0.23.0->huggingface-hub->recgen_inference==0.1.0) (3.17)
-[00:20]   Requirement already satisfied: h11>=0.16 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from httpcore==1.*->httpx<1,>=0.23.0->huggingface-hub->recgen_inference==0.1.0) (0.16.0)
-[00:20]   Requirement already satisfied: mpmath<1.4,>=1.1.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from sympy>=1.13.3->torch>=2.0->recgen_inference==0.1.0) (1.3.0)
-[00:20]   Requirement already satisfied: shellingham>=1.3.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from typer<0.26.0,>=0.20.0->huggingface-hub->recgen_inference==0.1.0) (1.5.4)
-[00:20]   Requirement already satisfied: rich>=13.8.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from typer<0.26.0,>=0.20.0->huggingface-hub->recgen_inference==0.1.0) (15.0.0)
-[00:20]   Requirement already satisfied: annotated-doc>=0.0.2 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from typer<0.26.0,>=0.20.0->huggingface-hub->recgen_inference==0.1.0) (0.0.4)
-[00:20]   Requirement already satisfied: MarkupSafe>=2.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from jinja2->torch>=2.0->recgen_inference==0.1.0) (3.0.3)
-[00:20]   Requirement already satisfied: markdown-it-py>=2.2.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from rich>=13.8.0->typer<0.26.0,>=0.20.0->huggingface-hub->recgen_inference==0.1.0) (4.2.0)
-[00:20]   Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from rich>=13.8.0->typer<0.26.0,>=0.20.0->huggingface-hub->recgen_inference==0.1.0) (2.20.0)
-[00:20]   Requirement already satisfied: mdurl~=0.1 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages (from markdown-it-py>=2.2.0->rich>=13.8.0->typer<0.26.0,>=0.20.0->huggingface-hub->recgen_inference==0.1.0) (0.1.2)
-[00:20]   Building wheels for collected packages: recgen_inference
-[00:20]     Building editable for recgen_inference (pyproject.toml): started
-[00:20]     Building editable for recgen_inference (pyproject.toml): finished with status 'done'
-[00:20]     Created wheel for recgen_inference: filename=recgen_inference-0.1.0-0.editable-py3-none-any.whl size=8239 sha256=5d1ab30a6f704e3b82572d7bdb7308d7cd77cc362f51d5153e492b64d0d4acc1
-[00:20]     Stored in directory: /private/var/folders/p8/qyz0lmpd2mld64f_f4c66y4c0000gn/T/pip-ephem-wheel-cache-tcvg09cu/wheels/f6/19/33/5651041dd2c2a9cfbff4f73c68ffaf97172e7d4dbf14729534
-[00:20]   Successfully built recgen_inference
-[00:21]   Installing collected packages: recgen_inference
-[00:21]   Successfully installed recgen_inference-0.1.0
-[00:21]   [ComfyUI-Recgen] Cloning RecGen into /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/ComfyUI/custom_nodes/ComfyUI-Recgen/vendor/recgen ...
-[00:21]   [ComfyUI-Recgen] Installing ComfyUI-Recgen package deps into /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/bin/python ...
-[00:21]   [ComfyUI-Recgen] Installing recgen_inference from /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/ComfyUI/custom_nodes/ComfyUI-Recgen/vendor/recgen ...
-[00:21] Installing validation endpoint...
-[00:21]   Cloning PozzettiAndrea/ComfyUI-validate-endpoint...
-[00:21] Running: git clone --depth 1 https://github.com/PozzettiAndrea/ComfyUI-validate-endpoint.git /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/ComfyUI/custom_nodes/ComfyUI-validate-endpoint
-[00:21] CUDA packages absent (will mock): spconv, flash_attn, nvdiffrast
-[00:21] [INSTALL] PASSED
-[00:21] 
-[00:21] [3/4] REGISTRATION
-[00:21] ----------------------------------------
-[00:21] 
+[00:20]   Requirement already satisfied: torch>=2.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from comfyui_recgen==0.0.1) (2.10.0)
+[00:20]   Requirement already satisfied: torchvision in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from comfyui_recgen==0.0.1) (0.25.0)
+[00:20]   Requirement already satisfied: numpy in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from comfyui_recgen==0.0.1) (2.4.6)
+[00:20]   Requirement already satisfied: scipy in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from comfyui_recgen==0.0.1) (1.17.1)
+[00:20]   Requirement already satisfied: Pillow in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from comfyui_recgen==0.0.1) (12.2.0)
+[00:20]   Collecting trimesh (from comfyui_recgen==0.0.1)
+[00:20]     Downloading trimesh-4.12.2-py3-none-any.whl.metadata (13 kB)
+[00:20]   Requirement already satisfied: safetensors in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from comfyui_recgen==0.0.1) (0.7.0)
+[00:20]   Requirement already satisfied: huggingface-hub in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from comfyui_recgen==0.0.1) (1.17.0)
+[00:20]   Collecting easydict (from comfyui_recgen==0.0.1)
+[00:20]     Downloading easydict-1.13-py3-none-any.whl.metadata (4.2 kB)
+[00:20]   Requirement already satisfied: tqdm in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from comfyui_recgen==0.0.1) (4.67.3)
+[00:20]   Collecting plyfile (from comfyui_recgen==0.0.1)
+[00:20]     Downloading plyfile-1.1.4-py3-none-any.whl.metadata (43 kB)
+[00:20]        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.3/43.3 kB 3.5 MB/s eta 0:00:00
+[00:20]   Collecting opencv-python-headless (from comfyui_recgen==0.0.1)
+[00:20]     Downloading opencv_python_headless-4.13.0.92-cp37-abi3-macosx_13_0_arm64.whl.metadata (19 kB)
+[00:20]   Requirement already satisfied: PyYAML in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from comfyui_recgen==0.0.1) (6.0.3)
+[00:20]   Requirement already satisfied: certifi in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from comfyui_recgen==0.0.1) (2026.5.20)
+[00:20]   Requirement already satisfied: transformers in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from comfyui_recgen==0.0.1) (5.9.0)
+[00:20]   Requirement already satisfied: filelock in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from torch>=2.0->comfyui_recgen==0.0.1) (3.29.0)
+[00:20]   Requirement already satisfied: typing-extensions>=4.10.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from torch>=2.0->comfyui_recgen==0.0.1) (4.15.0)
+[00:20]   Requirement already satisfied: sympy>=1.13.3 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from torch>=2.0->comfyui_recgen==0.0.1) (1.14.0)
+[00:20]   Requirement already satisfied: networkx>=2.5.1 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from torch>=2.0->comfyui_recgen==0.0.1) (3.6.1)
+[00:20]   Requirement already satisfied: jinja2 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from torch>=2.0->comfyui_recgen==0.0.1) (3.1.6)
+[00:20]   Requirement already satisfied: fsspec>=0.8.5 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from torch>=2.0->comfyui_recgen==0.0.1) (2026.4.0)
+[00:20]   Requirement already satisfied: click>=8.4.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from huggingface-hub->comfyui_recgen==0.0.1) (8.4.1)
+[00:20]   Requirement already satisfied: hf-xet<2.0.0,>=1.4.3 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from huggingface-hub->comfyui_recgen==0.0.1) (1.5.0)
+[00:20]   Requirement already satisfied: httpx<1,>=0.23.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from huggingface-hub->comfyui_recgen==0.0.1) (0.28.1)
+[00:20]   Requirement already satisfied: packaging>=20.9 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from huggingface-hub->comfyui_recgen==0.0.1) (26.2)
+[00:20]   Requirement already satisfied: typer<0.26.0,>=0.20.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from huggingface-hub->comfyui_recgen==0.0.1) (0.25.1)
+[00:20]   Requirement already satisfied: regex>=2025.10.22 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from transformers->comfyui_recgen==0.0.1) (2026.5.9)
+[00:20]   Requirement already satisfied: tokenizers<=0.23.0,>=0.22.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from transformers->comfyui_recgen==0.0.1) (0.22.2)
+[00:21]   Requirement already satisfied: anyio in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from httpx<1,>=0.23.0->huggingface-hub->comfyui_recgen==0.0.1) (4.13.0)
+[00:21]   Requirement already satisfied: httpcore==1.* in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from httpx<1,>=0.23.0->huggingface-hub->comfyui_recgen==0.0.1) (1.0.9)
+[00:21]   Requirement already satisfied: idna in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from httpx<1,>=0.23.0->huggingface-hub->comfyui_recgen==0.0.1) (3.17)
+[00:21]   Requirement already satisfied: h11>=0.16 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from httpcore==1.*->httpx<1,>=0.23.0->huggingface-hub->comfyui_recgen==0.0.1) (0.16.0)
+[00:21]   Requirement already satisfied: mpmath<1.4,>=1.1.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from sympy>=1.13.3->torch>=2.0->comfyui_recgen==0.0.1) (1.3.0)
+[00:21]   Requirement already satisfied: shellingham>=1.3.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from typer<0.26.0,>=0.20.0->huggingface-hub->comfyui_recgen==0.0.1) (1.5.4)
+[00:21]   Requirement already satisfied: rich>=13.8.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from typer<0.26.0,>=0.20.0->huggingface-hub->comfyui_recgen==0.0.1) (15.0.0)
+[00:21]   Requirement already satisfied: annotated-doc>=0.0.2 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from typer<0.26.0,>=0.20.0->huggingface-hub->comfyui_recgen==0.0.1) (0.0.4)
+[00:21]   Requirement already satisfied: MarkupSafe>=2.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from jinja2->torch>=2.0->comfyui_recgen==0.0.1) (3.0.3)
+[00:21]   Requirement already satisfied: markdown-it-py>=2.2.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from rich>=13.8.0->typer<0.26.0,>=0.20.0->huggingface-hub->comfyui_recgen==0.0.1) (4.2.0)
+[00:21]   Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from rich>=13.8.0->typer<0.26.0,>=0.20.0->huggingface-hub->comfyui_recgen==0.0.1) (2.20.0)
+[00:21]   Requirement already satisfied: mdurl~=0.1 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from markdown-it-py>=2.2.0->rich>=13.8.0->typer<0.26.0,>=0.20.0->huggingface-hub->comfyui_recgen==0.0.1) (0.1.2)
+[00:21]   Downloading easydict-1.13-py3-none-any.whl (6.8 kB)
+[00:21]   Downloading opencv_python_headless-4.13.0.92-cp37-abi3-macosx_13_0_arm64.whl (46.2 MB)
+[00:21]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.2/46.2 MB 61.7 MB/s eta 0:00:00
+[00:21]   Downloading plyfile-1.1.4-py3-none-any.whl (36 kB)
+[00:21]   Downloading trimesh-4.12.2-py3-none-any.whl (741 kB)
+[00:21]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 741.0/741.0 kB 42.4 MB/s eta 0:00:00
+[00:21]   Building wheels for collected packages: comfyui_recgen
+[00:21]     Building editable for comfyui_recgen (pyproject.toml): started
+[00:21]     Building editable for comfyui_recgen (pyproject.toml): finished with status 'done'
+[00:21]     Created wheel for comfyui_recgen: filename=comfyui_recgen-0.0.1-0.editable-py3-none-any.whl size=16102 sha256=a268496b42b3a516ea8530f17cddcc3ba20b71347fd5ca005e0569a2a24b924c
+[00:21]     Stored in directory: /private/var/folders/8d/778wjbv96mq1760tv6gk374m0000gn/T/pip-ephem-wheel-cache-9a_iuy8a/wheels/21/05/a1/63e71f4316376b82199653e8ee6282863543e4cc0d7620b25d
+[00:21]   Successfully built comfyui_recgen
+[00:22]   Installing collected packages: easydict, trimesh, plyfile, opencv-python-headless, comfyui_recgen
+[00:22]   Successfully installed comfyui_recgen-0.0.1 easydict-1.13 opencv-python-headless-4.13.0.92 plyfile-1.1.4 trimesh-4.12.2
+[00:23]   Obtaining file:///Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/ComfyUI/custom_nodes/ComfyUI-Recgen/vendor/recgen
+[00:23]     Installing build dependencies: started
+[00:25]     Installing build dependencies: finished with status 'done'
+[00:25]     Checking if build backend supports build_editable: started
+[00:25]     Checking if build backend supports build_editable: finished with status 'done'
+[00:25]     Getting requirements to build editable: started
+[00:25]     Getting requirements to build editable: finished with status 'done'
+[00:25]     Preparing editable metadata (pyproject.toml): started
+[00:25]     Preparing editable metadata (pyproject.toml): finished with status 'done'
+[00:25]   Requirement already satisfied: torch>=2.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from recgen_inference==0.1.0) (2.10.0)
+[00:25]   Requirement already satisfied: torchvision in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from recgen_inference==0.1.0) (0.25.0)
+[00:25]   Requirement already satisfied: numpy in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from recgen_inference==0.1.0) (2.4.6)
+[00:25]   Requirement already satisfied: scipy in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from recgen_inference==0.1.0) (1.17.1)
+[00:25]   Requirement already satisfied: Pillow in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from recgen_inference==0.1.0) (12.2.0)
+[00:25]   Requirement already satisfied: trimesh in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from recgen_inference==0.1.0) (4.12.2)
+[00:25]   Requirement already satisfied: safetensors in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from recgen_inference==0.1.0) (0.7.0)
+[00:25]   Requirement already satisfied: huggingface-hub in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from recgen_inference==0.1.0) (1.17.0)
+[00:25]   Requirement already satisfied: easydict in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from recgen_inference==0.1.0) (1.13)
+[00:25]   Requirement already satisfied: tqdm in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from recgen_inference==0.1.0) (4.67.3)
+[00:25]   Requirement already satisfied: plyfile in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from recgen_inference==0.1.0) (1.1.4)
+[00:25]   Requirement already satisfied: opencv-python-headless in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from recgen_inference==0.1.0) (4.13.0.92)
+[00:25]   Requirement already satisfied: filelock in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from torch>=2.0->recgen_inference==0.1.0) (3.29.0)
+[00:25]   Requirement already satisfied: typing-extensions>=4.10.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from torch>=2.0->recgen_inference==0.1.0) (4.15.0)
+[00:25]   Requirement already satisfied: sympy>=1.13.3 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from torch>=2.0->recgen_inference==0.1.0) (1.14.0)
+[00:25]   Requirement already satisfied: networkx>=2.5.1 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from torch>=2.0->recgen_inference==0.1.0) (3.6.1)
+[00:25]   Requirement already satisfied: jinja2 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from torch>=2.0->recgen_inference==0.1.0) (3.1.6)
+[00:25]   Requirement already satisfied: fsspec>=0.8.5 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from torch>=2.0->recgen_inference==0.1.0) (2026.4.0)
+[00:25]   Requirement already satisfied: click>=8.4.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from huggingface-hub->recgen_inference==0.1.0) (8.4.1)
+[00:25]   Requirement already satisfied: hf-xet<2.0.0,>=1.4.3 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from huggingface-hub->recgen_inference==0.1.0) (1.5.0)
+[00:25]   Requirement already satisfied: httpx<1,>=0.23.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from huggingface-hub->recgen_inference==0.1.0) (0.28.1)
+[00:25]   Requirement already satisfied: packaging>=20.9 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from huggingface-hub->recgen_inference==0.1.0) (26.2)
+[00:25]   Requirement already satisfied: pyyaml>=5.1 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from huggingface-hub->recgen_inference==0.1.0) (6.0.3)
+[00:25]   Requirement already satisfied: typer<0.26.0,>=0.20.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from huggingface-hub->recgen_inference==0.1.0) (0.25.1)
+[00:25]   Requirement already satisfied: anyio in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from httpx<1,>=0.23.0->huggingface-hub->recgen_inference==0.1.0) (4.13.0)
+[00:25]   Requirement already satisfied: certifi in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from httpx<1,>=0.23.0->huggingface-hub->recgen_inference==0.1.0) (2026.5.20)
+[00:25]   Requirement already satisfied: httpcore==1.* in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from httpx<1,>=0.23.0->huggingface-hub->recgen_inference==0.1.0) (1.0.9)
+[00:25]   Requirement already satisfied: idna in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from httpx<1,>=0.23.0->huggingface-hub->recgen_inference==0.1.0) (3.17)
+[00:25]   Requirement already satisfied: h11>=0.16 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from httpcore==1.*->httpx<1,>=0.23.0->huggingface-hub->recgen_inference==0.1.0) (0.16.0)
+[00:25]   Requirement already satisfied: mpmath<1.4,>=1.1.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from sympy>=1.13.3->torch>=2.0->recgen_inference==0.1.0) (1.3.0)
+[00:25]   Requirement already satisfied: shellingham>=1.3.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from typer<0.26.0,>=0.20.0->huggingface-hub->recgen_inference==0.1.0) (1.5.4)
+[00:25]   Requirement already satisfied: rich>=13.8.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from typer<0.26.0,>=0.20.0->huggingface-hub->recgen_inference==0.1.0) (15.0.0)
+[00:25]   Requirement already satisfied: annotated-doc>=0.0.2 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from typer<0.26.0,>=0.20.0->huggingface-hub->recgen_inference==0.1.0) (0.0.4)
+[00:25]   Requirement already satisfied: MarkupSafe>=2.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from jinja2->torch>=2.0->recgen_inference==0.1.0) (3.0.3)
+[00:25]   Requirement already satisfied: markdown-it-py>=2.2.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from rich>=13.8.0->typer<0.26.0,>=0.20.0->huggingface-hub->recgen_inference==0.1.0) (4.2.0)
+[00:25]   Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from rich>=13.8.0->typer<0.26.0,>=0.20.0->huggingface-hub->recgen_inference==0.1.0) (2.20.0)
+[00:25]   Requirement already satisfied: mdurl~=0.1 in /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages (from markdown-it-py>=2.2.0->rich>=13.8.0->typer<0.26.0,>=0.20.0->huggingface-hub->recgen_inference==0.1.0) (0.1.2)
+[00:25]   Building wheels for collected packages: recgen_inference
+[00:25]     Building editable for recgen_inference (pyproject.toml): started
+[00:26]     Building editable for recgen_inference (pyproject.toml): finished with status 'done'
+[00:26]     Created wheel for recgen_inference: filename=recgen_inference-0.1.0-0.editable-py3-none-any.whl size=8239 sha256=5738902632d0d5fec92f74257225393523f7986032dbd60c7de24bdd6847923d
+[00:26]     Stored in directory: /private/var/folders/8d/778wjbv96mq1760tv6gk374m0000gn/T/pip-ephem-wheel-cache-48zwpvdl/wheels/4e/fb/6a/c0e0041409798dda699f1ac63d5a98f195f911a8cfde8d7272
+[00:26]   Successfully built recgen_inference
+[00:26]   Installing collected packages: recgen_inference
+[00:26]   Successfully installed recgen_inference-0.1.0
+[00:27]   [ComfyUI-Recgen] Cloning RecGen into /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/ComfyUI/custom_nodes/ComfyUI-Recgen/vendor/recgen ...
+[00:27]   [ComfyUI-Recgen] Installing ComfyUI-Recgen package deps into /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/bin/python ...
+[00:27]   [ComfyUI-Recgen] Installing recgen_inference from /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/ComfyUI/custom_nodes/ComfyUI-Recgen/vendor/recgen ...
+[00:27]   [ComfyUI-Recgen] Staged test 3D model at input/3d/cube.obj
+[00:27] Installing validation endpoint...
+[00:27]   Cloning PozzettiAndrea/ComfyUI-validate-endpoint...
+[00:27] Running: git clone --depth 1 https://github.com/PozzettiAndrea/ComfyUI-validate-endpoint.git /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/ComfyUI/custom_nodes/ComfyUI-validate-endpoint
+[00:27] CUDA packages absent (will mock): spconv, flash_attn, nvdiffrast
+[00:27] [INSTALL] PASSED
+[00:27] 
+[00:27] [3/5] REGISTRATION
+[00:27] ----------------------------------------
+[00:27] 
 [DEBUG] server=None, api=None
-[00:21] 
+[00:27] 
 Starting ComfyUI server...
-[00:21] Starting ComfyUI server on port 41893...
-[00:21] CUDA mock packages: spconv, flash_attn, nvdiffrast
-[00:21] Starting ComfyUI server on port 41893...
-[00:21] Waiting for server to be ready (timeout: 600s)...
-[00:22]   [ComfyUI] [32m[INFO][0m setup plugin alembic.autogenerate.schemas
-[00:22]   [ComfyUI] [32m[INFO][0m setup plugin alembic.autogenerate.tables
-[00:22]   [ComfyUI] [32m[INFO][0m setup plugin alembic.autogenerate.types
-[00:22]   [ComfyUI] [32m[INFO][0m setup plugin alembic.autogenerate.constraints
-[00:22]   [ComfyUI] [32m[INFO][0m setup plugin alembic.autogenerate.defaults
-[00:22]   [ComfyUI] [32m[INFO][0m setup plugin alembic.autogenerate.comments
-[00:23]   [ComfyUI] [1m[33m[WARNING][0m Could not autodetect AIMDO implementation, assuming Nvidia
-[00:23]   [ComfyUI] [32m[INFO][0m comfy-aimdo unsupported operating system: Darwin
-[00:23]   [ComfyUI] [32m[INFO][0m NOTE: comfy-aimdo currently only supports Windows and Linux
-[00:27]   [ComfyUI] [32m[INFO][0m Found comfy_kitchen backend triton: {'available': False, 'disabled': True, 'unavailable_reason': "ImportError: No module named 'triton'", 'capabilities': []}
-[00:27]   [ComfyUI] [32m[INFO][0m Found comfy_kitchen backend cuda: {'available': False, 'disabled': True, 'unavailable_reason': 'Extension file not found: /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages/comfy_kitchen/backends/cuda/_C.abi3.so', 'capabilities': []}
-[00:27]   [ComfyUI] [32m[INFO][0m Found comfy_kitchen backend eager: {'available': True, 'disabled': False, 'unavailable_reason': None, 'capabilities': ['apply_rope', 'apply_rope1', 'dequantize_mxfp8', 'dequantize_nvfp4', 'dequantize_per_tensor_fp8', 'quantize_mxfp8', 'quantize_nvfp4', 'quantize_per_tensor_fp8', 'scaled_mm_mxfp8', 'scaled_mm_nvfp4']}
-[00:27]   [ComfyUI] [32m[INFO][0m Checkpoint files will always be loaded safely.
-[00:27]   [ComfyUI] [32m[INFO][0m Total VRAM 7168 MB, total RAM 7168 MB
-[00:27]   [ComfyUI] [32m[INFO][0m pytorch version: 2.10.0
-[00:27]   [ComfyUI] [32m[INFO][0m Mac Version (15, 7, 7)
-[00:27]   [ComfyUI] [32m[INFO][0m Set vram state to: SHARED
-[00:27]   [ComfyUI] [32m[INFO][0m Device: mps
-[00:28]   [ComfyUI] [32m[INFO][0m Using sub quadratic optimization for attention, if you have memory or speed issues try using: --use-split-cross-attention
-[00:29]   [ComfyUI] objc[2253]: Class AVFFrameReceiver is implemented in both /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages/av/.dylibs/libavdevice.62.1.100.dylib (0x1231783a8) and /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x1372243a8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
-[00:29]   [ComfyUI] objc[2253]: Class AVFAudioReceiver is implemented in both /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages/av/.dylibs/libavdevice.62.1.100.dylib (0x1231783f8) and /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x1372243f8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
-[00:33]   [ComfyUI] [32m[INFO][0m Python version: 3.11.9 (v3.11.9:de54cf5be3, Apr  2 2024, 07:12:50) [Clang 13.0.0 (clang-1300.0.29.30)]
-[00:33]   [ComfyUI] [32m[INFO][0m ComfyUI version: 0.22.0
-[00:33]   [ComfyUI] [32m[INFO][0m comfy-aimdo version: 0.4.5
-[00:33]   [ComfyUI] [32m[INFO][0m comfy-kitchen version: 0.2.8
-[00:33]   [ComfyUI] [1m[33m[WARNING][0m ****** User settings have been changed to be stored on the server instead of browser storage. ******
-[00:33]   [ComfyUI] [1m[33m[WARNING][0m ****** For multi-user setups add the --multi-user CLI argument to enable multiple user profiles. ******
-[00:33]   [ComfyUI] [32m[INFO][0m comfyui-frontend-package version: 1.44.19
-[00:33]   [ComfyUI] [32m[INFO][0m comfyui-workflow-templates version: 0.9.85
-[00:33]   [ComfyUI] [32m[INFO][0m comfyui-embedded-docs version: 0.5.1
-[00:33]   [ComfyUI] [32m[INFO][0m comfy-kitchen version: 0.2.8
-[00:33]   [ComfyUI] [32m[INFO][0m comfy-aimdo version: 0.4.5
-[00:33]   [ComfyUI] [32m[INFO][0m [Prompt Server] web root: /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/venv/lib/python3.11/site-packages/comfyui_frontend_package/static
-[00:33]   [ComfyUI] [32m[INFO][0m Asset seeder disabled
-[00:36]   [ComfyUI] [32m[INFO][0m
-[00:36]   [ComfyUI] Import times for custom nodes:
-[00:36]   [ComfyUI] [32m[INFO][0m    0.0 seconds: /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/ComfyUI/custom_nodes/websocket_image_save.py
-[00:36]   [ComfyUI] [32m[INFO][0m    0.0 seconds: /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/ComfyUI/custom_nodes/ComfyUI-validate-endpoint
-[00:36]   [ComfyUI] [32m[INFO][0m    0.0 seconds: /Users/runner/work/_temp/comfy-test-workspaces/Recgen-1927/ComfyUI/custom_nodes/ComfyUI-Recgen
-[00:36]   [ComfyUI] [32m[INFO][0m
-[00:36]   [ComfyUI] [32m[INFO][0m Context impl SQLiteImpl.
-[00:36]   [ComfyUI] [32m[INFO][0m Will assume non-transactional DDL.
-[00:36]   [ComfyUI] [32m[INFO][0m Context impl SQLiteImpl.
-[00:36]   [ComfyUI] [32m[INFO][0m Will assume non-transactional DDL.
-[00:36]   [ComfyUI] [32m[INFO][0m Running upgrade  -> 0001_assets, Initial assets schema
-[00:36]   [ComfyUI] Revision ID: 0001_assets
-[00:36]   [ComfyUI] Revises: None
-[00:36]   [ComfyUI] Create Date: 2025-12-10 00:00:00
-[00:36]   [ComfyUI] [32m[INFO][0m Running upgrade 0001_assets -> 0002_merge_to_asset_references, Merge AssetInfo and AssetCacheState into unified asset_references table.
-[00:36]   [ComfyUI] [32m[INFO][0m Running upgrade 0002_merge_to_asset_references -> 0003_add_metadata_job_id, Add system_metadata and job_id columns to asset_references.
-[00:36]   [ComfyUI] Change preview_id FK from assets.id to asset_references.id.
-[00:36]   [ComfyUI] [32m[INFO][0m Database upgraded from None to 0003_add_metadata_job_id
-[00:36]   [ComfyUI] [32m[INFO][0m Using RAM pressure cache.
-[00:36]   [ComfyUI] [32m[INFO][0m Starting server
-[00:36]   [ComfyUI] 
-[00:36]   [ComfyUI] [32m[INFO][0m To see the GUI go to: http://127.0.0.1:41893
-[00:37] Server responding, waiting for nodes to load...
-[00:57] Server is ready!
-[00:57] Checking for import errors in server logs...
-[00:57] No import errors detected
-[00:57] Found 745 registered nodes
-[00:57] [REGISTRATION] PASSED
-[00:57] 
-[00:57] [4/4] EXECUTION_LIGHT
-[00:57] ----------------------------------------
-[00:57] 
-[DEBUG] server=<comfy_test.comfyui.server.ComfyUIServer object at 0x102464210>, api=<comfy_test.comfyui.api.ComfyUIAPI object at 0x10413b010>
-[00:57] CPU runner - will execute 1 workflow(s)
-[00:57] Running 2 workflow(s) (light mode: 1 screenshot per workflow)...
-[00:57] Installing screenshot dependencies (playwright, pillow)...
-[00:58]   Packages installed, downloading chromium browser...
-[01:10]   Screenshot dependencies installed successfully
-[01:10] Starting headless browser...
-[01:10]   macOS -- using Apple Metal GPU via ANGLE
-[01:11]   [ComfyUI] [32m[INFO][0m Using RAM pressure cache.
-[01:11]   [ComfyUI] [32m[INFO][0m got prompt
-[01:11]   [ComfyUI] [32m[INFO][0m [32mPrompt executed in 0.14 seconds[0m
-[01:11] Capturing: load_example_preview.json
-[01:18]   Saved: /Users/runner/work/_temp/comfy-test-logs/Recgen-1927/main/macos-cpu/screenshots/load_example_preview_executed.png
-[01:18]   [ComfyUI] [32m[INFO][0m Using RAM pressure cache.
-[01:18]   [2/2] SKIPPED (not in cpu list) recgen_smoke.json
-[01:18]   [ComfyUI] [32m[INFO][0m Using RAM pressure cache.
-[01:18] Results saved to /Users/runner/work/_temp/comfy-test-logs/Recgen-1927/main/macos-cpu/results.json
-[01:18] Saved: /Users/runner/work/_temp/comfy-test-logs/Recgen-1927/main/macos-cpu/index.html
-[01:18] [EXECUTION_LIGHT] PASSED
-[01:18] 
+[00:27] Starting ComfyUI server on port 41894...
+[00:27] CUDA mock packages: spconv, flash_attn, nvdiffrast
+[00:27] Starting ComfyUI server on port 41894...
+[00:27] Waiting for server to be ready (timeout: 600s)...
+[00:28]   [ComfyUI] [32m[INFO][0m setup plugin alembic.autogenerate.schemas
+[00:28]   [ComfyUI] [32m[INFO][0m setup plugin alembic.autogenerate.tables
+[00:28]   [ComfyUI] [32m[INFO][0m setup plugin alembic.autogenerate.types
+[00:28]   [ComfyUI] [32m[INFO][0m setup plugin alembic.autogenerate.constraints
+[00:28]   [ComfyUI] [32m[INFO][0m setup plugin alembic.autogenerate.defaults
+[00:28]   [ComfyUI] [32m[INFO][0m setup plugin alembic.autogenerate.comments
+[00:29]   [ComfyUI] [1m[33m[WARNING][0m Could not autodetect AIMDO implementation, assuming Nvidia
+[00:29]   [ComfyUI] [32m[INFO][0m comfy-aimdo unsupported operating system: Darwin
+[00:29]   [ComfyUI] [32m[INFO][0m NOTE: comfy-aimdo currently only supports Windows and Linux
+[00:36]   [ComfyUI] [32m[INFO][0m Found comfy_kitchen backend cuda: {'available': False, 'disabled': True, 'unavailable_reason': 'Extension file not found: /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages/comfy_kitchen/backends/cuda/_C.abi3.so', 'capabilities': []}
+[00:36]   [ComfyUI] [32m[INFO][0m Found comfy_kitchen backend triton: {'available': False, 'disabled': True, 'unavailable_reason': "ImportError: No module named 'triton'", 'capabilities': []}
+[00:36]   [ComfyUI] [32m[INFO][0m Found comfy_kitchen backend eager: {'available': True, 'disabled': False, 'unavailable_reason': None, 'capabilities': ['apply_rope', 'apply_rope1', 'dequantize_mxfp8', 'dequantize_nvfp4', 'dequantize_per_tensor_fp8', 'quantize_mxfp8', 'quantize_nvfp4', 'quantize_per_tensor_fp8', 'scaled_mm_mxfp8', 'scaled_mm_nvfp4']}
+[00:36]   [ComfyUI] [32m[INFO][0m Checkpoint files will always be loaded safely.
+[00:36]   [ComfyUI] [32m[INFO][0m Total VRAM 7168 MB, total RAM 7168 MB
+[00:36]   [ComfyUI] [32m[INFO][0m pytorch version: 2.10.0
+[00:36]   [ComfyUI] [32m[INFO][0m Mac Version (15, 7, 7)
+[00:36]   [ComfyUI] [32m[INFO][0m Set vram state to: SHARED
+[00:36]   [ComfyUI] [32m[INFO][0m Device: mps
+[00:37]   [ComfyUI] [32m[INFO][0m Using sub quadratic optimization for attention, if you have memory or speed issues try using: --use-split-cross-attention
+[00:39]   [ComfyUI] objc[3638]: Class AVFFrameReceiver is implemented in both /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages/av/.dylibs/libavdevice.62.1.100.dylib (0x11efac3a8) and /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x13ade83a8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+[00:39]   [ComfyUI] objc[3638]: Class AVFAudioReceiver is implemented in both /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages/av/.dylibs/libavdevice.62.1.100.dylib (0x11efac3f8) and /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x13ade83f8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+[00:46]   [ComfyUI] [32m[INFO][0m Python version: 3.11.9 (v3.11.9:de54cf5be3, Apr  2 2024, 07:12:50) [Clang 13.0.0 (clang-1300.0.29.30)]
+[00:46]   [ComfyUI] [32m[INFO][0m ComfyUI version: 0.22.0
+[00:46]   [ComfyUI] [32m[INFO][0m comfy-aimdo version: 0.4.5
+[00:46]   [ComfyUI] [32m[INFO][0m comfy-kitchen version: 0.2.8
+[00:46]   [ComfyUI] [1m[33m[WARNING][0m ****** User settings have been changed to be stored on the server instead of browser storage. ******
+[00:46]   [ComfyUI] [1m[33m[WARNING][0m ****** For multi-user setups add the --multi-user CLI argument to enable multiple user profiles. ******
+[00:46]   [ComfyUI] [32m[INFO][0m comfyui-frontend-package version: 1.44.19
+[00:46]   [ComfyUI] [32m[INFO][0m comfyui-workflow-templates version: 0.9.85
+[00:46]   [ComfyUI] [32m[INFO][0m comfyui-embedded-docs version: 0.5.1
+[00:46]   [ComfyUI] [32m[INFO][0m comfy-kitchen version: 0.2.8
+[00:46]   [ComfyUI] [32m[INFO][0m comfy-aimdo version: 0.4.5
+[00:46]   [ComfyUI] [32m[INFO][0m [Prompt Server] web root: /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/venv/lib/python3.11/site-packages/comfyui_frontend_package/static
+[00:46]   [ComfyUI] [32m[INFO][0m Asset seeder disabled
+[00:49]   [ComfyUI] [32m[INFO][0m
+[00:49]   [ComfyUI] Import times for custom nodes:
+[00:49]   [ComfyUI] [32m[INFO][0m    0.0 seconds: /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/ComfyUI/custom_nodes/websocket_image_save.py
+[00:49]   [ComfyUI] [32m[INFO][0m    0.0 seconds: /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/ComfyUI/custom_nodes/ComfyUI-validate-endpoint
+[00:49]   [ComfyUI] [32m[INFO][0m    0.0 seconds: /Users/runner/work/_temp/comfy-test-workspaces/Recgen-2337/ComfyUI/custom_nodes/ComfyUI-Recgen
+[00:49]   [ComfyUI] [32m[INFO][0m
+[00:49]   [ComfyUI] [32m[INFO][0m Context impl SQLiteImpl.
+[00:49]   [ComfyUI] [32m[INFO][0m Will assume non-transactional DDL.
+[00:49]   [ComfyUI] [32m[INFO][0m Context impl SQLiteImpl.
+[00:49]   [ComfyUI] [32m[INFO][0m Will assume non-transactional DDL.
+[00:49]   [ComfyUI] [32m[INFO][0m Running upgrade  -> 0001_assets, Initial assets schema
+[00:49]   [ComfyUI] Revision ID: 0001_assets
+[00:49]   [ComfyUI] Revises: None
+[00:49]   [ComfyUI] Create Date: 2025-12-10 00:00:00
+[00:49]   [ComfyUI] [32m[INFO][0m Running upgrade 0001_assets -> 0002_merge_to_asset_references, Merge AssetInfo and AssetCacheState into unified asset_references table.
+[00:49]   [ComfyUI] [32m[INFO][0m Running upgrade 0002_merge_to_asset_references -> 0003_add_metadata_job_id, Add system_metadata and job_id columns to asset_references.
+[00:49]   [ComfyUI] Change preview_id FK from assets.id to asset_references.id.
+[00:49]   [ComfyUI] [32m[INFO][0m Database upgraded from None to 0003_add_metadata_job_id
+[00:49]   [ComfyUI] [32m[INFO][0m Using RAM pressure cache.
+[00:49]   [ComfyUI] [32m[INFO][0m Starting server
+[00:49]   [ComfyUI] 
+[00:49]   [ComfyUI] [32m[INFO][0m To see the GUI go to: http://127.0.0.1:41894
+[00:49] Server responding, waiting for nodes to load...
+[01:09] Server is ready!
+[01:09] Checking for import errors in server logs...
+[01:09] No import errors detected
+[01:09] Found 745 registered nodes
+[01:09] [REGISTRATION] PASSED
+[01:09] 
+[01:09] [4/5] VALIDATION
+[01:09] ----------------------------------------
+[01:09] 
+[DEBUG] server=<comfy_test.comfyui.server.ComfyUIServer object at 0x101d72dd0>, api=<comfy_test.comfyui.api.ComfyUIAPI object at 0x100b3ca50>
+[01:09] Validating 3 workflow(s)...
+[01:09]   [1/3] Validating load_example_preview.json
+[01:09]     OK
+[01:09]   [2/3] Validating recgen_smoke.json
+[01:09]     OK
+[01:09]   [3/3] Validating preview3d_cube.json
+[01:09]     OK
+[01:09] [VALIDATION] PASSED
+[01:09] 
+[01:09] [5/5] EXECUTION_LIGHT
+[01:09] ----------------------------------------
+[01:09] 
+[DEBUG] server=<comfy_test.comfyui.server.ComfyUIServer object at 0x101d72dd0>, api=<comfy_test.comfyui.api.ComfyUIAPI object at 0x100b3ca50>
+[01:09] CPU runner - will execute 2 workflow(s)
+[01:09] Running 3 workflow(s) (light mode: 1 screenshot per workflow)...
+[01:09] Installing screenshot dependencies (playwright, pillow)...
+[01:11]   Packages installed, downloading chromium browser...
+[01:24]   Screenshot dependencies installed successfully
+[01:25] Starting headless browser...
+[01:25]   macOS -- using Apple Metal GPU via ANGLE
+[01:26]   [ComfyUI] [32m[INFO][0m Using RAM pressure cache.
+[01:27]   [ComfyUI] [32m[INFO][0m got prompt
+[01:27]   [ComfyUI] [32m[INFO][0m [32mPrompt executed in 0.27 seconds[0m
+[01:27] Capturing: load_example_preview.json
+[01:37]   Saved: /Users/runner/work/_temp/comfy-test-logs/Recgen-2337/main/macos-cpu/screenshots/load_example_preview_executed.png
+[01:37]   [ComfyUI] [32m[INFO][0m Using RAM pressure cache.
+[01:38]   [2/3] SKIPPED (not in cpu list) recgen_smoke.json
+[01:38]   [ComfyUI] [32m[INFO][0m Using RAM pressure cache.
+[01:38]   [ComfyUI] [32m[INFO][0m Using RAM pressure cache.
+[01:38]   [ComfyUI] [32m[INFO][0m got prompt
+[01:38]   [ComfyUI] [32m[INFO][0m [32mPrompt executed in 0.01 seconds[0m
+[01:38] Capturing: preview3d_cube.json
+[01:44]   Saved: /Users/runner/work/_temp/comfy-test-logs/Recgen-2337/main/macos-cpu/screenshots/preview3d_cube_executed.png
+[01:44]   [ComfyUI] [32m[INFO][0m Using RAM pressure cache.
+[01:44] Results saved to /Users/runner/work/_temp/comfy-test-logs/Recgen-2337/main/macos-cpu/results.json
+[01:44] Saved: /Users/runner/work/_temp/comfy-test-logs/Recgen-2337/main/macos-cpu/index.html
+[01:44] [EXECUTION_LIGHT] PASSED
+[01:44] 
 macos: PASSED
-[01:18] Stopping ComfyUI server...
+[01:44] Stopping ComfyUI server...

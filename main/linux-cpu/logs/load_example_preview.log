@@ -2,23 +2,23 @@ Loading workflow from /home/runner/work/ComfyUI-Recgen/ComfyUI-Recgen/workflows/
   [ComfyUI] [32m[INFO][0m Using RAM pressure cache.
 Converting litegraph workflow to prompt format...
 Queuing workflow: /home/runner/work/ComfyUI-Recgen/ComfyUI-Recgen/workflows/load_example_preview.json...
-[DEBUG] Connecting WebSocket to ws://127.0.0.1:41884/ws?clientId=57d0b155-3255-4fc0-bf87-0d65091c85cb
+[DEBUG] Connecting WebSocket to ws://127.0.0.1:41882/ws?clientId=ede3dada-23f5-427e-b042-bd0bf3bc9283
 [DEBUG] WebSocket connected successfully
-Queued with ID: c1a0a75f-914c-4275-bcdd-7066f74ec5d1
-[DEBUG] WS msg: type=status prompt_id=None (waiting for c1a0a75f-914c-4275-bcdd-7066f74ec5d1)
   [ComfyUI] [32m[INFO][0m got prompt
-[DEBUG] WS msg: type=status prompt_id=None (waiting for c1a0a75f-914c-4275-bcdd-7066f74ec5d1)
-[DEBUG] WS msg: type=status prompt_id=None (waiting for c1a0a75f-914c-4275-bcdd-7066f74ec5d1)
-[DEBUG] WS msg: type=progress_state prompt_id=c1a0a75f-914c-4275-bcdd-7066f74ec5d1 (waiting for c1a0a75f-914c-4275-bcdd-7066f74ec5d1)
+Queued with ID: 95d1204d-3d2e-418a-8721-7983f25ad16b
+[DEBUG] WS msg: type=status prompt_id=None (waiting for 95d1204d-3d2e-418a-8721-7983f25ad16b)
+[DEBUG] WS msg: type=status prompt_id=None (waiting for 95d1204d-3d2e-418a-8721-7983f25ad16b)
+[DEBUG] WS msg: type=status prompt_id=None (waiting for 95d1204d-3d2e-418a-8721-7983f25ad16b)
+[DEBUG] WS msg: type=progress_state prompt_id=95d1204d-3d2e-418a-8721-7983f25ad16b (waiting for 95d1204d-3d2e-418a-8721-7983f25ad16b)
 [DEBUG] Unhandled msg_type: progress_state
-[DEBUG] WS msg: type=progress_state prompt_id=c1a0a75f-914c-4275-bcdd-7066f74ec5d1 (waiting for c1a0a75f-914c-4275-bcdd-7066f74ec5d1)
+[DEBUG] WS msg: type=progress_state prompt_id=95d1204d-3d2e-418a-8721-7983f25ad16b (waiting for 95d1204d-3d2e-418a-8721-7983f25ad16b)
 [DEBUG] Unhandled msg_type: progress_state
-[DEBUG] WS msg: type=progress_state prompt_id=c1a0a75f-914c-4275-bcdd-7066f74ec5d1 (waiting for c1a0a75f-914c-4275-bcdd-7066f74ec5d1)
+[DEBUG] WS msg: type=progress_state prompt_id=95d1204d-3d2e-418a-8721-7983f25ad16b (waiting for 95d1204d-3d2e-418a-8721-7983f25ad16b)
 [DEBUG] Unhandled msg_type: progress_state
-[DEBUG] WS msg: type=progress_state prompt_id=c1a0a75f-914c-4275-bcdd-7066f74ec5d1 (waiting for c1a0a75f-914c-4275-bcdd-7066f74ec5d1)
+[DEBUG] WS msg: type=progress_state prompt_id=95d1204d-3d2e-418a-8721-7983f25ad16b (waiting for 95d1204d-3d2e-418a-8721-7983f25ad16b)
 [DEBUG] Unhandled msg_type: progress_state
-[DEBUG] WS msg: type=status prompt_id=None (waiting for c1a0a75f-914c-4275-bcdd-7066f74ec5d1)
+[DEBUG] WS msg: type=status prompt_id=None (waiting for 95d1204d-3d2e-418a-8721-7983f25ad16b)
+  [ComfyUI] [32m[INFO][0m [32mPrompt executed in 0.23 seconds[0m
 Execution complete (queue empty)
-  [ComfyUI] [32m[INFO][0m [32mPrompt executed in 0.25 seconds[0m
 Workflow completed successfully!
     Saved screenshot: load_example_preview_executed.png
