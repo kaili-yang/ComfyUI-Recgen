@@ -68,8 +68,6 @@ except ImportError:
     inject_spconv_mock()
     print("[ComfyUI-Recgen] Injected pure PyTorch spconv.pytorch mock for macOS compatibility.")
 
-from recgen_inference import build_recgen, generate
-
 try:
     import folder_paths
 except ImportError:
@@ -77,6 +75,22 @@ except ImportError:
 
 # Global cache for loaded pipeline to avoid reloading it on every run
 _pipeline_cache = {}
+
+_build_recgen = None
+_generate = None
+
+
+def _ensure_recgen_imported():
+    """Import RecGen lazily so registration can succeed without full runtime deps."""
+    global _build_recgen, _generate
+    if _build_recgen is not None and _generate is not None:
+        return _build_recgen, _generate
+
+    from recgen_inference import build_recgen, generate
+
+    _build_recgen = build_recgen
+    _generate = generate
+    return _build_recgen, _generate
 
 def _activate_pipeline_device(pipeline, device: str) -> str:
     """Move pipeline to the requested runtime device; return the device actually used."""
@@ -100,6 +114,7 @@ def _activate_pipeline_device(pipeline, device: str) -> str:
 
 
 def get_pipeline(checkpoint, device):
+    build_recgen, _ = _ensure_recgen_imported()
     cache_key = (checkpoint, device)
     if cache_key not in _pipeline_cache:
         load_device = "cpu" if device == "mps" else device
@@ -202,6 +217,7 @@ class RecGen2DTo3DNode:
 
     @classmethod
     def INPUT_TYPES(s):
+        build_recgen, _ = _ensure_recgen_imported()
         # We try to load checkpoints dynamically, default to "recgen_base.multiview_stereo" if it fails
         try:
             checkpoints = build_recgen.list_checkpoints()
@@ -239,6 +255,7 @@ class RecGen2DTo3DNode:
     CATEGORY = "RecGen"
 
     def generate_3d(self, image, depth, mask, checkpoint, device, fx, fy, cx, cy, seed, save_splat, save_glb):
+        _, generate = _ensure_recgen_imported()
         # 1. Convert Image tensor to numpy RGB [H, W, 3] in uint8
         img_tensor = image[0]
         rgb_np = (img_tensor.cpu().numpy() * 255.0).clip(0, 255).astype(np.uint8)
