@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-05-28T07:05:20.541841+00:00",
+  "timestamp": "2026-05-28T19:29:20.851844+00:00",
   "platform": "linux",
   "hardware": {
     "os": "Linux-6.17.0-1015-azure-x86_64-with-glibc2.39",
-    "cpu": "AMD EPYC 7763 64-Core Processor"
+    "cpu": "AMD EPYC 9V74 80-Core Processor"
   },
-  "commit_hash": "789d83e156e37c46304e53ffe068cf9923431a87",
+  "commit_hash": "64660dd430e8b4496ad4879fef7f803cf1592111",
   "run_url": null,
   "success": true,
   "summary": {
@@ -17,16 +17,16 @@
     {
       "name": "load_example_preview",
       "status": "pass",
-      "duration_seconds": 6.47,
+      "duration_seconds": 6.26,
       "error": null,
       "hardware": {
         "os": "Linux-6.17.0-1015-azure-x86_64-with-glibc2.39",
-        "cpu": "AMD EPYC 7763 64-Core Processor"
+        "cpu": "AMD EPYC 9V74 80-Core Processor"
       },
       "resources": {
         "ram": {
-          "peak": 0.65,
-          "avg": 0.64
+          "peak": 0.67,
+          "avg": 0.65
         },
         "total_ram_gb": 15.6,
         "samples": 7

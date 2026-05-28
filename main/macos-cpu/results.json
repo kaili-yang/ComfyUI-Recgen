@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-05-28T07:05:30.622425+00:00",
+  "timestamp": "2026-05-28T19:29:12.011811+00:00",
   "platform": "macos",
   "hardware": {
     "os": "macOS-15.7.7-arm64-arm-64bit",
     "cpu": "arm"
   },
-  "commit_hash": "789d83e156e37c46304e53ffe068cf9923431a87",
+  "commit_hash": "64660dd430e8b4496ad4879fef7f803cf1592111",
   "run_url": null,
   "success": true,
   "summary": {
@@ -17,7 +17,7 @@
     {
       "name": "load_example_preview",
       "status": "pass",
-      "duration_seconds": 8.2,
+      "duration_seconds": 6.93,
       "error": null,
       "hardware": {
         "os": "macOS-15.7.7-arm64-arm-64bit",
@@ -25,11 +25,11 @@
       },
       "resources": {
         "ram": {
-          "peak": 0.69,
-          "avg": 0.67
+          "peak": 0.66,
+          "avg": 0.64
         },
         "total_ram_gb": 7.0,
-        "samples": 8
+        "samples": 7
       }
     },
     {

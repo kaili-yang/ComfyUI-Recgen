@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-05-28T07:06:47.467441+00:00",
+  "timestamp": "2026-05-28T19:30:36.458643+00:00",
   "platform": "windows",
   "hardware": {
     "os": "Windows-10-10.0.26100-SP0",
-    "cpu": "AMD64 Family 25 Model 17 Stepping 1, AuthenticAMD"
+    "cpu": "AMD64 Family 25 Model 1 Stepping 1, AuthenticAMD"
   },
-  "commit_hash": "789d83e156e37c46304e53ffe068cf9923431a87",
+  "commit_hash": "64660dd430e8b4496ad4879fef7f803cf1592111",
   "run_url": null,
   "success": true,
   "summary": {
@@ -17,19 +17,19 @@
     {
       "name": "load_example_preview",
       "status": "pass",
-      "duration_seconds": 9.25,
+      "duration_seconds": 8.7,
       "error": null,
       "hardware": {
         "os": "Windows-10-10.0.26100-SP0",
-        "cpu": "AMD64 Family 25 Model 17 Stepping 1, AuthenticAMD"
+        "cpu": "AMD64 Family 25 Model 1 Stepping 1, AuthenticAMD"
       },
       "resources": {
         "ram": {
-          "peak": 0.56,
+          "peak": 0.57,
           "avg": 0.56
         },
         "total_ram_gb": 16.0,
-        "samples": 10
+        "samples": 9
       }
     },
     {

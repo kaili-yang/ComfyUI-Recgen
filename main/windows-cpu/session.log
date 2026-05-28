@@ -1,4 +1,4 @@
-[00:00] Crash dump logging enabled: D:\a\_temp\comfy-test-logs\Recgen-0704\main\windows-cpu\crash_dump.log
+[00:00] Crash dump logging enabled: D:\a\_temp\comfy-test-logs\Recgen-1928\main\windows-cpu\crash_dump.log
 [00:00] 
 [00:00] [1/4] SYNTAX
 [00:00] ----------------------------------------
@@ -15,228 +15,159 @@
 [DEBUG] server=None, api=None
 [00:00] 
 Setting up ComfyUI...
-[00:00] Creating virtual environment at D:\a\_temp\comfy-test-workspaces\Recgen-0704\.venv...
-[00:00] Running: uv venv D:\a\_temp\comfy-test-workspaces\Recgen-0704\.venv --python 3.11
+[00:00] Creating virtual environment at D:\a\_temp\comfy-test-workspaces\Recgen-1928\.venv...
+[00:00] Running: uv venv D:\a\_temp\comfy-test-workspaces\Recgen-1928\.venv --python 3.11
 [00:00] torch_version='2.10.0' -> pinning torch==2.10.0 torchvision==0.25.0 torchaudio==2.10.0
-[00:00] Cloning ComfyUI (latest) to D:\a\_temp\comfy-test-workspaces\Recgen-0704\ComfyUI...
-[00:00] Running: git clone --depth 1 https://github.com/comfyanonymous/ComfyUI.git D:\a\_temp\comfy-test-workspaces\Recgen-0704\ComfyUI
+[00:00] Cloning ComfyUI (latest) to D:\a\_temp\comfy-test-workspaces\Recgen-1928\ComfyUI...
+[00:00] Running: git clone --depth 1 https://github.com/comfyanonymous/ComfyUI.git D:\a\_temp\comfy-test-workspaces\Recgen-1928\ComfyUI
 [00:01] Pinning torch family from https://download.pytorch.org/whl/cpu: torch==2.10.0 torchvision==0.25.0 torchaudio==2.10.0
-[00:01] Running: uv pip install --python D:\a\_temp\comfy-test-workspaces\Recgen-0704\.venv\Scripts\python.exe --index-url https://download.pytorch.org/whl/cpu --extra-index-url https://pypi.org/simple --index-strategy unsafe-best-match torch==2.10.0 torchvision==0.25.0 torchaudio==2.10.0
-[00:28] Installing ComfyUI requirements into D:\a\_temp\comfy-test-workspaces\Recgen-0704\.venv...
-[00:28]     comfyui-frontend-package==1.44.19
-[00:28]     comfyui-workflow-templates==0.9.85
-[00:28]     comfyui-embedded-docs==0.5.1
-[00:28]     torch
-[00:28]     torchsde
-[00:28]     torchvision
-[00:28]     torchaudio
-[00:28]     numpy>=1.25.0
-[00:28]     einops
-[00:28]     transformers>=4.50.3
-[00:28]     tokenizers>=0.13.3
-[00:28]     sentencepiece
-[00:28]     safetensors>=0.4.2
-[00:28]     aiohttp>=3.11.8
-[00:28]     yarl>=1.18.0
-[00:28]     pyyaml
-[00:28]     Pillow
-[00:28]     scipy
-[00:28]     tqdm
-[00:28]     psutil
-[00:28]     alembic
-[00:28]     SQLAlchemy>=2.0.0
-[00:28]     filelock
-[00:28]     av>=14.2.0
-[00:28]     comfy-kitchen>=0.2.8
-[00:28]     comfy-aimdo==0.4.5
-[00:28]     requests
-[00:28]     simpleeval>=1.0.0
-[00:28]     blake3
-[00:28]     
-[00:28]     #non essential dependencies:
-[00:28]     kornia>=0.7.1
-[00:28]     spandrel
-[00:28]     pydantic~=2.0
-[00:28]     pydantic-settings~=2.0
-[00:28]     PyOpenGL
-[00:28]     glfw
-[00:28] Running: uv pip install --python D:\a\_temp\comfy-test-workspaces\Recgen-0704\.venv\Scripts\python.exe --index-url https://download.pytorch.org/whl/cpu --extra-index-url https://pypi.org/simple --index-strategy unsafe-best-match -r D:\a\_temp\comfy-test-workspaces\Recgen-0704\ComfyUI\requirements.txt
-[01:02] 
+[00:01] Running: uv pip install --python D:\a\_temp\comfy-test-workspaces\Recgen-1928\.venv\Scripts\python.exe --index-url https://download.pytorch.org/whl/cpu --extra-index-url https://pypi.org/simple --index-strategy unsafe-best-match torch==2.10.0 torchvision==0.25.0 torchaudio==2.10.0
+[00:30] Installing ComfyUI requirements into D:\a\_temp\comfy-test-workspaces\Recgen-1928\.venv...
+[00:30]     comfyui-frontend-package==1.44.19
+[00:30]     comfyui-workflow-templates==0.9.85
+[00:30]     comfyui-embedded-docs==0.5.1
+[00:30]     torch
+[00:30]     torchsde
+[00:30]     torchvision
+[00:30]     torchaudio
+[00:30]     numpy>=1.25.0
+[00:30]     einops
+[00:30]     transformers>=4.50.3
+[00:30]     tokenizers>=0.13.3
+[00:30]     sentencepiece
+[00:30]     safetensors>=0.4.2
+[00:30]     aiohttp>=3.11.8
+[00:30]     yarl>=1.18.0
+[00:30]     pyyaml
+[00:30]     Pillow
+[00:30]     scipy
+[00:30]     tqdm
+[00:30]     psutil
+[00:30]     alembic
+[00:30]     SQLAlchemy>=2.0.0
+[00:30]     filelock
+[00:30]     av>=14.2.0
+[00:30]     comfy-kitchen>=0.2.8
+[00:30]     comfy-aimdo==0.4.5
+[00:30]     requests
+[00:30]     simpleeval>=1.0.0
+[00:30]     blake3
+[00:30]     
+[00:30]     #non essential dependencies:
+[00:30]     kornia>=0.7.1
+[00:30]     spandrel
+[00:30]     pydantic~=2.0
+[00:30]     pydantic-settings~=2.0
+[00:30]     PyOpenGL
+[00:30]     glfw
+[00:30] Running: uv pip install --python D:\a\_temp\comfy-test-workspaces\Recgen-1928\.venv\Scripts\python.exe --index-url https://download.pytorch.org/whl/cpu --extra-index-url https://pypi.org/simple --index-strategy unsafe-best-match -r D:\a\_temp\comfy-test-workspaces\Recgen-1928\ComfyUI\requirements.txt
+[01:00] 
 Installing custom node...
-[01:02] Copying ComfyUI-Recgen to D:\a\_temp\comfy-test-workspaces\Recgen-0704\ComfyUI\custom_nodes\ComfyUI-Recgen...
-[01:02] 
+[01:00] Copying ComfyUI-Recgen to D:\a\_temp\comfy-test-workspaces\Recgen-1928\ComfyUI\custom_nodes\ComfyUI-Recgen...
+[01:00] 
 Running install.py...
-[01:02] Running: D:\a\_temp\comfy-test-workspaces\Recgen-0704\.venv\Scripts\python.exe D:\a\_temp\comfy-test-workspaces\Recgen-0704\ComfyUI\custom_nodes\ComfyUI-Recgen\install.py
-[01:03]   [ComfyUI-Recgen] Cloning RecGen into D:\a\_temp\comfy-test-workspaces\Recgen-0704\ComfyUI\custom_nodes\ComfyUI-Recgen\vendor\recgen ...
-[01:03]   [ComfyUI-Recgen] Installing recgen_inference from D:\a\_temp\comfy-test-workspaces\Recgen-0704\ComfyUI\custom_nodes\ComfyUI-Recgen\vendor\recgen ...
-[01:03] Warning: install.py failed (exit code 1), continuing...
-[01:03]   [!] Cloning into 'D:\a\_temp\comfy-test-workspaces\Recgen-0704\ComfyUI\custom_nodes\ComfyUI-Recgen\vendor\recgen'...
-[01:03]   [!] D:\a\_temp\comfy-test-workspaces\Recgen-0704\.venv\Scripts\python.exe: No module named pip
-[01:03]   [!] Traceback (most recent call last):
-[01:03]   [!]   File "D:\a\_temp\comfy-test-workspaces\Recgen-0704\ComfyUI\custom_nodes\ComfyUI-Recgen\install.py", line 38, in <module>
-[01:03]   [!]     main()
-[01:03]   [!]   File "D:\a\_temp\comfy-test-workspaces\Recgen-0704\ComfyUI\custom_nodes\ComfyUI-Recgen\install.py", line 34, in main
-[01:03]   [!]     ensure_recgen()
-[01:03]   [!]   File "D:\a\_temp\comfy-test-workspaces\Recgen-0704\ComfyUI\custom_nodes\ComfyUI-Recgen\install.py", line 27, in ensure_recgen
-[01:03]   [!]     subprocess.check_call(
-[01:03]   [!]   File "C:\hostedtoolcache\windows\Python\3.11.9\x64\Lib\subprocess.py", line 413, in check_call
-[01:03]   [!]     raise CalledProcessError(retcode, cmd)
-[01:03]   [!] subprocess.CalledProcessError: Command '['D:\\a\\_temp\\comfy-test-workspaces\\Recgen-0704\\.venv\\Scripts\\python.exe', '-m', 'pip', 'install', '-e', 'D:\\a\\_temp\\comfy-test-workspaces\\Recgen-0704\\ComfyUI\\custom_nodes\\ComfyUI-Recgen\\vendor\\recgen']' returned non-zero exit status 1.
-[01:03] Installing validation endpoint...
-[01:03]   Cloning PozzettiAndrea/ComfyUI-validate-endpoint...
-[01:03] Running: git clone --depth 1 https://github.com/PozzettiAndrea/ComfyUI-validate-endpoint.git D:\a\_temp\comfy-test-workspaces\Recgen-0704\ComfyUI\custom_nodes\ComfyUI-validate-endpoint
-[01:03] CUDA packages absent (will mock): spconv, flash_attn, nvdiffrast
-[01:03] [INSTALL] PASSED
-[01:03] 
-[01:03] [3/4] REGISTRATION
-[01:03] ----------------------------------------
-[01:03] 
+[01:00] Running: D:\a\_temp\comfy-test-workspaces\Recgen-1928\.venv\Scripts\python.exe D:\a\_temp\comfy-test-workspaces\Recgen-1928\ComfyUI\custom_nodes\ComfyUI-Recgen\install.py
+[01:07]   [ComfyUI-Recgen] Cloning RecGen into D:\a\_temp\comfy-test-workspaces\Recgen-1928\ComfyUI\custom_nodes\ComfyUI-Recgen\vendor\recgen ...
+[01:07]   [ComfyUI-Recgen] Installing ComfyUI-Recgen package deps into D:\a\_temp\comfy-test-workspaces\Recgen-1928\.venv\Scripts\python.exe ...
+[01:07]   [ComfyUI-Recgen] Installing recgen_inference from D:\a\_temp\comfy-test-workspaces\Recgen-1928\ComfyUI\custom_nodes\ComfyUI-Recgen\vendor\recgen ...
+[01:07] Installing validation endpoint...
+[01:07]   Cloning PozzettiAndrea/ComfyUI-validate-endpoint...
+[01:07] Running: git clone --depth 1 https://github.com/PozzettiAndrea/ComfyUI-validate-endpoint.git D:\a\_temp\comfy-test-workspaces\Recgen-1928\ComfyUI\custom_nodes\ComfyUI-validate-endpoint
+[01:08] CUDA packages absent (will mock): spconv, flash_attn, nvdiffrast
+[01:08] [INSTALL] PASSED
+[01:08] 
+[01:08] [3/4] REGISTRATION
+[01:08] ----------------------------------------
+[01:08] 
 [DEBUG] server=None, api=None
-[01:03] 
+[01:08] 
 Starting ComfyUI server...
-[01:03] Starting ComfyUI server on port 41896...
-[01:03] CUDA mock packages: spconv, flash_attn, nvdiffrast
-[01:03] Starting ComfyUI server on port 41896...
-[01:03] Waiting for server to be ready (timeout: 600s)...
-[01:05]   [ComfyUI] [32m[INFO][0m setup plugin alembic.autogenerate.schemas
-[01:05]   [ComfyUI] [32m[INFO][0m setup plugin alembic.autogenerate.tables
-[01:05]   [ComfyUI] [32m[INFO][0m setup plugin alembic.autogenerate.types
-[01:05]   [ComfyUI] [32m[INFO][0m setup plugin alembic.autogenerate.constraints
-[01:05]   [ComfyUI] [32m[INFO][0m setup plugin alembic.autogenerate.defaults
-[01:05]   [ComfyUI] [32m[INFO][0m setup plugin alembic.autogenerate.comments
-[01:13]   [ComfyUI] [32m[INFO][0m Found comfy_kitchen backend triton: {'available': False, 'disabled': True, 'unavailable_reason': "ImportError: No module named 'triton'", 'capabilities': []}
-[01:13]   [ComfyUI] [32m[INFO][0m Found comfy_kitchen backend eager: {'available': True, 'disabled': False, 'unavailable_reason': None, 'capabilities': ['apply_rope', 'apply_rope1', 'dequantize_mxfp8', 'dequantize_nvfp4', 'dequantize_per_tensor_fp8', 'quantize_mxfp8', 'quantize_nvfp4', 'quantize_per_tensor_fp8', 'scaled_mm_mxfp8', 'scaled_mm_nvfp4']}
-[01:13]   [ComfyUI] [32m[INFO][0m Found comfy_kitchen backend cuda: {'available': False, 'disabled': True, 'unavailable_reason': 'CUDA not available on this system', 'capabilities': []}
-[01:13]   [ComfyUI] [32m[INFO][0m Checkpoint files will always be loaded safely.
-[01:14]   [ComfyUI] [32m[INFO][0m Total VRAM 16379 MB, total RAM 16379 MB
-[01:14]   [ComfyUI] [32m[INFO][0m pytorch version: 2.10.0+cpu
-[01:14]   [ComfyUI] [32m[INFO][0m Set vram state to: DISABLED
-[01:14]   [ComfyUI] [32m[INFO][0m Device: cpu
-[01:14]   [ComfyUI] [32m[INFO][0m Using sub quadratic optimization for attention, if you have memory or speed issues try using: --use-split-cross-attention
-[01:21]   [ComfyUI] [32m[INFO][0m Python version: 3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]
-[01:21]   [ComfyUI] [32m[INFO][0m ComfyUI version: 0.22.0
-[01:21]   [ComfyUI] [32m[INFO][0m comfy-aimdo version: 0.4.5
-[01:21]   [ComfyUI] [32m[INFO][0m comfy-kitchen version: 0.2.8
-[01:21]   [ComfyUI] [1m[33m[WARNING][0m ****** User settings have been changed to be stored on the server instead of browser storage. ******
-[01:21]   [ComfyUI] [1m[33m[WARNING][0m ****** For multi-user setups add the --multi-user CLI argument to enable multiple user profiles. ******
-[01:21]   [ComfyUI] [32m[INFO][0m comfyui-frontend-package version: 1.44.19
-[01:21]   [ComfyUI] [32m[INFO][0m comfyui-workflow-templates version: 0.9.85
-[01:21]   [ComfyUI] [32m[INFO][0m comfyui-embedded-docs version: 0.5.1
-[01:21]   [ComfyUI] [32m[INFO][0m comfy-kitchen version: 0.2.8
-[01:21]   [ComfyUI] [32m[INFO][0m comfy-aimdo version: 0.4.5
-[01:21]   [ComfyUI] [32m[INFO][0m [Prompt Server] web root: D:\a\_temp\comfy-test-workspaces\Recgen-0704\.venv\Lib\site-packages\comfyui_frontend_package\static
-[01:21]   [ComfyUI] [32m[INFO][0m Asset seeder disabled
-[01:24]   [ComfyUI] [32m[INFO][0m
-[01:24]   [ComfyUI] Import times for custom nodes:
-[01:24]   [ComfyUI] [32m[INFO][0m    0.0 seconds: D:\a\_temp\comfy-test-workspaces\Recgen-0704\ComfyUI\custom_nodes\websocket_image_save.py
-[01:24]   [ComfyUI] [32m[INFO][0m    0.0 seconds: D:\a\_temp\comfy-test-workspaces\Recgen-0704\ComfyUI\custom_nodes\ComfyUI-validate-endpoint
-[01:24]   [ComfyUI] [32m[INFO][0m    0.0 seconds: D:\a\_temp\comfy-test-workspaces\Recgen-0704\ComfyUI\custom_nodes\ComfyUI-Recgen
-[01:24]   [ComfyUI] [32m[INFO][0m
-[01:24]   [ComfyUI] [32m[INFO][0m Context impl SQLiteImpl.
-[01:24]   [ComfyUI] [32m[INFO][0m Will assume non-transactional DDL.
-[01:24]   [ComfyUI] [32m[INFO][0m Context impl SQLiteImpl.
-[01:24]   [ComfyUI] [32m[INFO][0m Will assume non-transactional DDL.
-[01:24]   [ComfyUI] [32m[INFO][0m Running upgrade  -> 0001_assets, Initial assets schema
-[01:24]   [ComfyUI] Revision ID: 0001_assets
-[01:24]   [ComfyUI] Revises: None
-[01:24]   [ComfyUI] Create Date: 2025-12-10 00:00:00
-[01:24]   [ComfyUI] [32m[INFO][0m Running upgrade 0001_assets -> 0002_merge_to_asset_references, Merge AssetInfo and AssetCacheState into unified asset_references table.
-[01:24]   [ComfyUI] [32m[INFO][0m Running upgrade 0002_merge_to_asset_references -> 0003_add_metadata_job_id, Add system_metadata and job_id columns to asset_references.
-[01:24]   [ComfyUI] Change preview_id FK from assets.id to asset_references.id.
-[01:24]   [ComfyUI] [32m[INFO][0m Database upgraded from None to 0003_add_metadata_job_id
-[01:25]   [ComfyUI] [32m[INFO][0m Using RAM pressure cache.
-[01:25]   [ComfyUI] [32m[INFO][0m Starting server
-[01:25]   [ComfyUI] 
-[01:25]   [ComfyUI] [32m[INFO][0m To see the GUI go to: http://127.0.0.1:41896
-[01:25] Server responding, waiting for nodes to load...
-[01:45] Server is ready!
-[01:45] Checking for import errors in server logs...
-[01:45] No import errors detected
-[01:45]   [ComfyUI] [1m[31m[ERROR][0m [ERROR] An error occurred while retrieving information for the 'RecGen2DTo3D' node.
-[01:45]   [ComfyUI] [1m[31m[ERROR][0m Traceback (most recent call last):
-[01:45]   [ComfyUI]   File "D:\a\_temp\comfy-test-workspaces\Recgen-0704\ComfyUI\server.py", line 763, in get_object_info
-[01:45]   [ComfyUI]     out[x] = node_info(x)
-[01:45]   [ComfyUI]              ^^^^^^^^^^^^
-[01:45]   [ComfyUI]   File "D:\a\_temp\comfy-test-workspaces\Recgen-0704\ComfyUI\server.py", line 712, in node_info
-[01:45]   [ComfyUI]     info['input'] = obj_class.INPUT_TYPES()
-[01:45]   [ComfyUI]                     ^^^^^^^^^^^^^^^^^^^^^^^
-[01:45]   [ComfyUI]   File "D:\a\_temp\comfy-test-workspaces\Recgen-0704\ComfyUI\custom_nodes\ComfyUI-Recgen\src\comfyui_recgen\nodes.py", line 220, in INPUT_TYPES
-[01:45]   [ComfyUI]     build_recgen, _ = _ensure_recgen_imported()
-[01:45]   [ComfyUI]                       ^^^^^^^^^^^^^^^^^^^^^^^^^
-[01:45]   [ComfyUI]   File "D:\a\_temp\comfy-test-workspaces\Recgen-0704\ComfyUI\custom_nodes\ComfyUI-Recgen\src\comfyui_recgen\nodes.py", line 89, in _ensure_recgen_imported
-[01:45]   [ComfyUI]     from recgen_inference import build_recgen, generate
-[01:45]   [ComfyUI]   File "D:\a\_temp\comfy-test-workspaces\Recgen-0704\ComfyUI\custom_nodes\ComfyUI-Recgen\vendor\recgen\recgen_inference\__init__.py", line 11, in <module>
-[01:45]   [ComfyUI]     from recgen_inference._result import RecGenResult
-[01:45]   [ComfyUI]   File "D:\a\_temp\comfy-test-workspaces\Recgen-0704\ComfyUI\custom_nodes\ComfyUI-Recgen\vendor\recgen\recgen_inference\_result.py", line 9, in <module>
-[01:45]   [ComfyUI]     import trimesh
-[01:45]   [ComfyUI] ModuleNotFoundError: No module named 'trimesh'
-[01:45]   [ComfyUI] 
-[01:45] Found 744 registered nodes
-[01:45] [REGISTRATION] PASSED
-[01:45] 
-[01:45] [4/4] EXECUTION_LIGHT
-[01:45] ----------------------------------------
-[01:45] 
-[DEBUG] server=<comfy_test.comfyui.server.ComfyUIServer object at 0x0000024E215E7850>, api=<comfy_test.comfyui.api.ComfyUIAPI object at 0x0000024E2160E410>
-[01:45] CPU runner - will execute 1 workflow(s)
-[01:45] Running 2 workflow(s) (light mode: 1 screenshot per workflow)...
-[01:45] Installing screenshot dependencies (playwright, pillow)...
-[01:46]   Packages installed, downloading chromium browser...
-[02:01]   Screenshot dependencies installed successfully
-[02:02] Starting headless browser...
-[02:02]   Downloading Mesa llvmpipe for Windows...
-[02:06]   Copied opengl32.dll to Chromium dir
-[02:06]   Copied libgallium_wgl.dll to Chromium dir
-[02:07]   Using Mesa llvmpipe (desktop GL) -- multithreaded CPU rendering
-[02:07]   [ComfyUI] [32m[INFO][0m Using RAM pressure cache.
-[02:07]   [ComfyUI] [1m[31m[ERROR][0m [ERROR] An error occurred while retrieving information for the 'RecGen2DTo3D' node.
-[02:07]   [ComfyUI] [1m[31m[ERROR][0m Traceback (most recent call last):
-[02:07]   [ComfyUI]   File "D:\a\_temp\comfy-test-workspaces\Recgen-0704\ComfyUI\server.py", line 763, in get_object_info
-[02:07]   [ComfyUI]     out[x] = node_info(x)
-[02:07]   [ComfyUI]              ^^^^^^^^^^^^
-[02:07]   [ComfyUI]   File "D:\a\_temp\comfy-test-workspaces\Recgen-0704\ComfyUI\server.py", line 712, in node_info
-[02:07]   [ComfyUI]     info['input'] = obj_class.INPUT_TYPES()
-[02:07]   [ComfyUI]                     ^^^^^^^^^^^^^^^^^^^^^^^
-[02:07]   [ComfyUI]   File "D:\a\_temp\comfy-test-workspaces\Recgen-0704\ComfyUI\custom_nodes\ComfyUI-Recgen\src\comfyui_recgen\nodes.py", line 220, in INPUT_TYPES
-[02:07]   [ComfyUI]     build_recgen, _ = _ensure_recgen_imported()
-[02:07]   [ComfyUI]                       ^^^^^^^^^^^^^^^^^^^^^^^^^
-[02:07]   [ComfyUI]   File "D:\a\_temp\comfy-test-workspaces\Recgen-0704\ComfyUI\custom_nodes\ComfyUI-Recgen\src\comfyui_recgen\nodes.py", line 89, in _ensure_recgen_imported
-[02:07]   [ComfyUI]     from recgen_inference import build_recgen, generate
-[02:07]   [ComfyUI]   File "D:\a\_temp\comfy-test-workspaces\Recgen-0704\ComfyUI\custom_nodes\ComfyUI-Recgen\vendor\recgen\recgen_inference\__init__.py", line 11, in <module>
-[02:07]   [ComfyUI]     from recgen_inference._result import RecGenResult
-[02:07]   [ComfyUI]   File "D:\a\_temp\comfy-test-workspaces\Recgen-0704\ComfyUI\custom_nodes\ComfyUI-Recgen\vendor\recgen\recgen_inference\_result.py", line 9, in <module>
-[02:07]   [ComfyUI]     import trimesh
-[02:07]   [ComfyUI] ModuleNotFoundError: No module named 'trimesh'
-[02:07]   [ComfyUI] 
-[02:07]   [ComfyUI] [32m[INFO][0m got prompt
-[02:08]   [ComfyUI] [32m[INFO][0m [32mPrompt executed in 0.20 seconds[0m
-[02:08] Capturing: load_example_preview.json
-[02:09]   [ComfyUI] [1m[31m[ERROR][0m [ERROR] An error occurred while retrieving information for the 'RecGen2DTo3D' node.
-[02:09]   [ComfyUI] [1m[31m[ERROR][0m Traceback (most recent call last):
-[02:09]   [ComfyUI]   File "D:\a\_temp\comfy-test-workspaces\Recgen-0704\ComfyUI\server.py", line 763, in get_object_info
-[02:09]   [ComfyUI]     out[x] = node_info(x)
-[02:09]   [ComfyUI]              ^^^^^^^^^^^^
-[02:09]   [ComfyUI]   File "D:\a\_temp\comfy-test-workspaces\Recgen-0704\ComfyUI\server.py", line 712, in node_info
-[02:09]   [ComfyUI]     info['input'] = obj_class.INPUT_TYPES()
-[02:09]   [ComfyUI]                     ^^^^^^^^^^^^^^^^^^^^^^^
-[02:09]   [ComfyUI]   File "D:\a\_temp\comfy-test-workspaces\Recgen-0704\ComfyUI\custom_nodes\ComfyUI-Recgen\src\comfyui_recgen\nodes.py", line 220, in INPUT_TYPES
-[02:09]   [ComfyUI]     build_recgen, _ = _ensure_recgen_imported()
-[02:09]   [ComfyUI]                       ^^^^^^^^^^^^^^^^^^^^^^^^^
-[02:09]   [ComfyUI]   File "D:\a\_temp\comfy-test-workspaces\Recgen-0704\ComfyUI\custom_nodes\ComfyUI-Recgen\src\comfyui_recgen\nodes.py", line 89, in _ensure_recgen_imported
-[02:09]   [ComfyUI]     from recgen_inference import build_recgen, generate
-[02:09]   [ComfyUI]   File "D:\a\_temp\comfy-test-workspaces\Recgen-0704\ComfyUI\custom_nodes\ComfyUI-Recgen\vendor\recgen\recgen_inference\__init__.py", line 11, in <module>
-[02:09]   [ComfyUI]     from recgen_inference._result import RecGenResult
-[02:09]   [ComfyUI]   File "D:\a\_temp\comfy-test-workspaces\Recgen-0704\ComfyUI\custom_nodes\ComfyUI-Recgen\vendor\recgen\recgen_inference\_result.py", line 9, in <module>
-[02:09]   [ComfyUI]     import trimesh
-[02:09]   [ComfyUI] ModuleNotFoundError: No module named 'trimesh'
-[02:09]   [ComfyUI] 
-[02:16]   Saved: D:\a\_temp\comfy-test-logs\Recgen-0704\main\windows-cpu\screenshots\load_example_preview_executed.png
-[02:16]   [ComfyUI] [32m[INFO][0m Using RAM pressure cache.
-[02:16]   [ComfyUI] [32m[INFO][0m Using RAM pressure cache.
-[02:16]   [2/2] SKIPPED (not in cpu list) recgen_smoke.json
-[02:17] Results saved to D:\a\_temp\comfy-test-logs\Recgen-0704\main\windows-cpu\results.json
-[02:17] Saved: D:\a\_temp\comfy-test-logs\Recgen-0704\main\windows-cpu\index.html
-[02:17] [EXECUTION_LIGHT] PASSED
-[02:17] 
+[01:08] Starting ComfyUI server on port 41894...
+[01:08] CUDA mock packages: spconv, flash_attn, nvdiffrast
+[01:08] Starting ComfyUI server on port 41894...
+[01:08] Waiting for server to be ready (timeout: 600s)...
+[01:09]   [ComfyUI] [32m[INFO][0m setup plugin alembic.autogenerate.schemas
+[01:09]   [ComfyUI] [32m[INFO][0m setup plugin alembic.autogenerate.tables
+[01:09]   [ComfyUI] [32m[INFO][0m setup plugin alembic.autogenerate.types
+[01:09]   [ComfyUI] [32m[INFO][0m setup plugin alembic.autogenerate.constraints
+[01:09]   [ComfyUI] [32m[INFO][0m setup plugin alembic.autogenerate.defaults
+[01:09]   [ComfyUI] [32m[INFO][0m setup plugin alembic.autogenerate.comments
+[01:17]   [ComfyUI] [32m[INFO][0m Found comfy_kitchen backend triton: {'available': False, 'disabled': True, 'unavailable_reason': "ImportError: No module named 'triton'", 'capabilities': []}
+[01:17]   [ComfyUI] [32m[INFO][0m Found comfy_kitchen backend cuda: {'available': False, 'disabled': True, 'unavailable_reason': 'CUDA not available on this system', 'capabilities': []}
+[01:17]   [ComfyUI] [32m[INFO][0m Found comfy_kitchen backend eager: {'available': True, 'disabled': False, 'unavailable_reason': None, 'capabilities': ['apply_rope', 'apply_rope1', 'dequantize_mxfp8', 'dequantize_nvfp4', 'dequantize_per_tensor_fp8', 'quantize_mxfp8', 'quantize_nvfp4', 'quantize_per_tensor_fp8', 'scaled_mm_mxfp8', 'scaled_mm_nvfp4']}
+[01:17]   [ComfyUI] [32m[INFO][0m Checkpoint files will always be loaded safely.
+[01:17]   [ComfyUI] [32m[INFO][0m Total VRAM 16379 MB, total RAM 16379 MB
+[01:17]   [ComfyUI] [32m[INFO][0m pytorch version: 2.10.0+cpu
+[01:17]   [ComfyUI] [32m[INFO][0m Set vram state to: DISABLED
+[01:17]   [ComfyUI] [32m[INFO][0m Device: cpu
+[01:17]   [ComfyUI] [32m[INFO][0m Using sub quadratic optimization for attention, if you have memory or speed issues try using: --use-split-cross-attention
+[01:23]   [ComfyUI] [32m[INFO][0m Python version: 3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]
+[01:23]   [ComfyUI] [32m[INFO][0m ComfyUI version: 0.22.0
+[01:23]   [ComfyUI] [32m[INFO][0m comfy-aimdo version: 0.4.5
+[01:23]   [ComfyUI] [32m[INFO][0m comfy-kitchen version: 0.2.8
+[01:23]   [ComfyUI] [1m[33m[WARNING][0m ****** User settings have been changed to be stored on the server instead of browser storage. ******
+[01:23]   [ComfyUI] [1m[33m[WARNING][0m ****** For multi-user setups add the --multi-user CLI argument to enable multiple user profiles. ******
+[01:23]   [ComfyUI] [32m[INFO][0m comfyui-frontend-package version: 1.44.19
+[01:23]   [ComfyUI] [32m[INFO][0m comfyui-workflow-templates version: 0.9.85
+[01:23]   [ComfyUI] [32m[INFO][0m comfyui-embedded-docs version: 0.5.1
+[01:23]   [ComfyUI] [32m[INFO][0m comfy-kitchen version: 0.2.8
+[01:23]   [ComfyUI] [32m[INFO][0m comfy-aimdo version: 0.4.5
+[01:23]   [ComfyUI] [32m[INFO][0m [Prompt Server] web root: D:\a\_temp\comfy-test-workspaces\Recgen-1928\.venv\Lib\site-packages\comfyui_frontend_package\static
+[01:23]   [ComfyUI] [32m[INFO][0m Asset seeder disabled
+[01:27]   [ComfyUI] [32m[INFO][0m
+[01:27]   [ComfyUI] Import times for custom nodes:
+[01:27]   [ComfyUI] [32m[INFO][0m    0.0 seconds: D:\a\_temp\comfy-test-workspaces\Recgen-1928\ComfyUI\custom_nodes\websocket_image_save.py
+[01:27]   [ComfyUI] [32m[INFO][0m    0.0 seconds: D:\a\_temp\comfy-test-workspaces\Recgen-1928\ComfyUI\custom_nodes\ComfyUI-validate-endpoint
+[01:27]   [ComfyUI] [32m[INFO][0m    0.0 seconds: D:\a\_temp\comfy-test-workspaces\Recgen-1928\ComfyUI\custom_nodes\ComfyUI-Recgen
+[01:27]   [ComfyUI] [32m[INFO][0m
+[01:27]   [ComfyUI] [32m[INFO][0m Context impl SQLiteImpl.
+[01:27]   [ComfyUI] [32m[INFO][0m Will assume non-transactional DDL.
+[01:27]   [ComfyUI] [32m[INFO][0m Context impl SQLiteImpl.
+[01:27]   [ComfyUI] [32m[INFO][0m Will assume non-transactional DDL.
+[01:27]   [ComfyUI] [32m[INFO][0m Running upgrade  -> 0001_assets, Initial assets schema
+[01:27]   [ComfyUI] Revision ID: 0001_assets
+[01:27]   [ComfyUI] Revises: None
+[01:27]   [ComfyUI] Create Date: 2025-12-10 00:00:00
+[01:27]   [ComfyUI] [32m[INFO][0m Running upgrade 0001_assets -> 0002_merge_to_asset_references, Merge AssetInfo and AssetCacheState into unified asset_references table.
+[01:27]   [ComfyUI] [32m[INFO][0m Running upgrade 0002_merge_to_asset_references -> 0003_add_metadata_job_id, Add system_metadata and job_id columns to asset_references.
+[01:27]   [ComfyUI] Change preview_id FK from assets.id to asset_references.id.
+[01:27]   [ComfyUI] [32m[INFO][0m Database upgraded from None to 0003_add_metadata_job_id
+[01:27]   [ComfyUI] [32m[INFO][0m Using RAM pressure cache.
+[01:27]   [ComfyUI] [32m[INFO][0m Starting server
+[01:27]   [ComfyUI] 
+[01:27]   [ComfyUI] [32m[INFO][0m To see the GUI go to: http://127.0.0.1:41894
+[01:28] Server responding, waiting for nodes to load...
+[01:48] Server is ready!
+[01:48] Checking for import errors in server logs...
+[01:48] No import errors detected
+[01:48] Found 745 registered nodes
+[01:48] [REGISTRATION] PASSED
+[01:48] 
+[01:48] [4/4] EXECUTION_LIGHT
+[01:48] ----------------------------------------
+[01:48] 
+[DEBUG] server=<comfy_test.comfyui.server.ComfyUIServer object at 0x000001C2CD253590>, api=<comfy_test.comfyui.api.ComfyUIAPI object at 0x000001C2CD27B850>
+[01:48] CPU runner - will execute 1 workflow(s)
+[01:48] Running 2 workflow(s) (light mode: 1 screenshot per workflow)...
+[01:48] Installing screenshot dependencies (playwright, pillow)...
+[01:49]   Packages installed, downloading chromium browser...
+[02:06]   Screenshot dependencies installed successfully
+[02:06] Starting headless browser...
+[02:07]   Downloading Mesa llvmpipe for Windows...
+[02:12]   Copied opengl32.dll to Chromium dir
+[02:13]   Copied libgallium_wgl.dll to Chromium dir
+[02:13]   Using Mesa llvmpipe (desktop GL) -- multithreaded CPU rendering
+[02:13]   [ComfyUI] [32m[INFO][0m Using RAM pressure cache.
+[02:13]   [ComfyUI] [32m[INFO][0m got prompt
+[02:13]   [ComfyUI] [32m[INFO][0m [32mPrompt executed in 0.18 seconds[0m
+[02:13] Capturing: load_example_preview.json
+[02:22]   Saved: D:\a\_temp\comfy-test-logs\Recgen-1928\main\windows-cpu\screenshots\load_example_preview_executed.png
+[02:22]   [ComfyUI] [32m[INFO][0m Using RAM pressure cache.
+[02:22]   [ComfyUI] [32m[INFO][0m Using RAM pressure cache.
+[02:22]   [2/2] SKIPPED (not in cpu list) recgen_smoke.json
+[02:22] Results saved to D:\a\_temp\comfy-test-logs\Recgen-1928\main\windows-cpu\results.json
+[02:22] Saved: D:\a\_temp\comfy-test-logs\Recgen-1928\main\windows-cpu\index.html
+[02:22] [EXECUTION_LIGHT] PASSED
+[02:22] 
 windows: PASSED
-[02:17] Stopping ComfyUI server...
+[02:22] Stopping ComfyUI server...

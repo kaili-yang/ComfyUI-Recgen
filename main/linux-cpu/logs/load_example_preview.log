@@ -1,62 +1,24 @@
 Loading workflow from /home/runner/work/ComfyUI-Recgen/ComfyUI-Recgen/workflows/load_example_preview.json...
   [ComfyUI] [32m[INFO][0m Using RAM pressure cache.
 Converting litegraph workflow to prompt format...
-  [ComfyUI] [1m[31m[ERROR][0m [ERROR] An error occurred while retrieving information for the 'RecGen2DTo3D' node.
-  [ComfyUI] [1m[31m[ERROR][0m Traceback (most recent call last):
-  [ComfyUI]   File "/home/runner/work/_temp/comfy-test-workspaces/Recgen-0704/ComfyUI/server.py", line 763, in get_object_info
-  [ComfyUI]     out[x] = node_info(x)
-  [ComfyUI]              ^^^^^^^^^^^^
-  [ComfyUI]   File "/home/runner/work/_temp/comfy-test-workspaces/Recgen-0704/ComfyUI/server.py", line 712, in node_info
-  [ComfyUI]     info['input'] = obj_class.INPUT_TYPES()
-  [ComfyUI]                     ^^^^^^^^^^^^^^^^^^^^^^^
-  [ComfyUI]   File "/home/runner/work/_temp/comfy-test-workspaces/Recgen-0704/ComfyUI/custom_nodes/ComfyUI-Recgen/src/comfyui_recgen/nodes.py", line 220, in INPUT_TYPES
-  [ComfyUI]     build_recgen, _ = _ensure_recgen_imported()
-  [ComfyUI]                       ^^^^^^^^^^^^^^^^^^^^^^^^^
-  [ComfyUI]   File "/home/runner/work/_temp/comfy-test-workspaces/Recgen-0704/ComfyUI/custom_nodes/ComfyUI-Recgen/src/comfyui_recgen/nodes.py", line 89, in _ensure_recgen_imported
-  [ComfyUI]     from recgen_inference import build_recgen, generate
-  [ComfyUI]   File "/home/runner/work/_temp/comfy-test-workspaces/Recgen-0704/ComfyUI/custom_nodes/ComfyUI-Recgen/vendor/recgen/recgen_inference/__init__.py", line 11, in <module>
-  [ComfyUI]     from recgen_inference._result import RecGenResult
-  [ComfyUI]   File "/home/runner/work/_temp/comfy-test-workspaces/Recgen-0704/ComfyUI/custom_nodes/ComfyUI-Recgen/vendor/recgen/recgen_inference/_result.py", line 9, in <module>
-  [ComfyUI]     import trimesh
-  [ComfyUI] ModuleNotFoundError: No module named 'trimesh'
-  [ComfyUI] 
 Queuing workflow: /home/runner/work/ComfyUI-Recgen/ComfyUI-Recgen/workflows/load_example_preview.json...
-[DEBUG] Connecting WebSocket to ws://127.0.0.1:41884/ws?clientId=6676585b-eb54-4495-b991-ff6d8d3d82ff
+[DEBUG] Connecting WebSocket to ws://127.0.0.1:41884/ws?clientId=57d0b155-3255-4fc0-bf87-0d65091c85cb
 [DEBUG] WebSocket connected successfully
+Queued with ID: c1a0a75f-914c-4275-bcdd-7066f74ec5d1
+[DEBUG] WS msg: type=status prompt_id=None (waiting for c1a0a75f-914c-4275-bcdd-7066f74ec5d1)
   [ComfyUI] [32m[INFO][0m got prompt
-Queued with ID: 715e14ae-e7e9-42f5-88a3-3cf2b58d4223
-[DEBUG] WS msg: type=status prompt_id=None (waiting for 715e14ae-e7e9-42f5-88a3-3cf2b58d4223)
-[DEBUG] WS msg: type=status prompt_id=None (waiting for 715e14ae-e7e9-42f5-88a3-3cf2b58d4223)
-[DEBUG] WS msg: type=status prompt_id=None (waiting for 715e14ae-e7e9-42f5-88a3-3cf2b58d4223)
-[DEBUG] WS msg: type=progress_state prompt_id=715e14ae-e7e9-42f5-88a3-3cf2b58d4223 (waiting for 715e14ae-e7e9-42f5-88a3-3cf2b58d4223)
+[DEBUG] WS msg: type=status prompt_id=None (waiting for c1a0a75f-914c-4275-bcdd-7066f74ec5d1)
+[DEBUG] WS msg: type=status prompt_id=None (waiting for c1a0a75f-914c-4275-bcdd-7066f74ec5d1)
+[DEBUG] WS msg: type=progress_state prompt_id=c1a0a75f-914c-4275-bcdd-7066f74ec5d1 (waiting for c1a0a75f-914c-4275-bcdd-7066f74ec5d1)
 [DEBUG] Unhandled msg_type: progress_state
-[DEBUG] WS msg: type=progress_state prompt_id=715e14ae-e7e9-42f5-88a3-3cf2b58d4223 (waiting for 715e14ae-e7e9-42f5-88a3-3cf2b58d4223)
+[DEBUG] WS msg: type=progress_state prompt_id=c1a0a75f-914c-4275-bcdd-7066f74ec5d1 (waiting for c1a0a75f-914c-4275-bcdd-7066f74ec5d1)
 [DEBUG] Unhandled msg_type: progress_state
-[DEBUG] WS msg: type=progress_state prompt_id=715e14ae-e7e9-42f5-88a3-3cf2b58d4223 (waiting for 715e14ae-e7e9-42f5-88a3-3cf2b58d4223)
+[DEBUG] WS msg: type=progress_state prompt_id=c1a0a75f-914c-4275-bcdd-7066f74ec5d1 (waiting for c1a0a75f-914c-4275-bcdd-7066f74ec5d1)
 [DEBUG] Unhandled msg_type: progress_state
-[DEBUG] WS msg: type=progress_state prompt_id=715e14ae-e7e9-42f5-88a3-3cf2b58d4223 (waiting for 715e14ae-e7e9-42f5-88a3-3cf2b58d4223)
+[DEBUG] WS msg: type=progress_state prompt_id=c1a0a75f-914c-4275-bcdd-7066f74ec5d1 (waiting for c1a0a75f-914c-4275-bcdd-7066f74ec5d1)
 [DEBUG] Unhandled msg_type: progress_state
-[DEBUG] WS msg: type=status prompt_id=None (waiting for 715e14ae-e7e9-42f5-88a3-3cf2b58d4223)
-  [ComfyUI] [32m[INFO][0m [32mPrompt executed in 0.24 seconds[0m
+[DEBUG] WS msg: type=status prompt_id=None (waiting for c1a0a75f-914c-4275-bcdd-7066f74ec5d1)
 Execution complete (queue empty)
+  [ComfyUI] [32m[INFO][0m [32mPrompt executed in 0.25 seconds[0m
 Workflow completed successfully!
-  [ComfyUI] [1m[31m[ERROR][0m [ERROR] An error occurred while retrieving information for the 'RecGen2DTo3D' node.
-  [ComfyUI] [1m[31m[ERROR][0m Traceback (most recent call last):
-  [ComfyUI]   File "/home/runner/work/_temp/comfy-test-workspaces/Recgen-0704/ComfyUI/server.py", line 763, in get_object_info
-  [ComfyUI]     out[x] = node_info(x)
-  [ComfyUI]              ^^^^^^^^^^^^
-  [ComfyUI]   File "/home/runner/work/_temp/comfy-test-workspaces/Recgen-0704/ComfyUI/server.py", line 712, in node_info
-  [ComfyUI]     info['input'] = obj_class.INPUT_TYPES()
-  [ComfyUI]                     ^^^^^^^^^^^^^^^^^^^^^^^
-  [ComfyUI]   File "/home/runner/work/_temp/comfy-test-workspaces/Recgen-0704/ComfyUI/custom_nodes/ComfyUI-Recgen/src/comfyui_recgen/nodes.py", line 220, in INPUT_TYPES
-  [ComfyUI]     build_recgen, _ = _ensure_recgen_imported()
-  [ComfyUI]                       ^^^^^^^^^^^^^^^^^^^^^^^^^
-  [ComfyUI]   File "/home/runner/work/_temp/comfy-test-workspaces/Recgen-0704/ComfyUI/custom_nodes/ComfyUI-Recgen/src/comfyui_recgen/nodes.py", line 89, in _ensure_recgen_imported
-  [ComfyUI]     from recgen_inference import build_recgen, generate
-  [ComfyUI]   File "/home/runner/work/_temp/comfy-test-workspaces/Recgen-0704/ComfyUI/custom_nodes/ComfyUI-Recgen/vendor/recgen/recgen_inference/__init__.py", line 11, in <module>
-  [ComfyUI]     from recgen_inference._result import RecGenResult
-  [ComfyUI]   File "/home/runner/work/_temp/comfy-test-workspaces/Recgen-0704/ComfyUI/custom_nodes/ComfyUI-Recgen/vendor/recgen/recgen_inference/_result.py", line 9, in <module>
-  [ComfyUI]     import trimesh
-  [ComfyUI] ModuleNotFoundError: No module named 'trimesh'
-  [ComfyUI] 
     Saved screenshot: load_example_preview_executed.png

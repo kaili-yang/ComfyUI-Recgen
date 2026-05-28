@@ -1,24 +1,24 @@
 Loading workflow from /Users/runner/work/ComfyUI-Recgen/ComfyUI-Recgen/workflows/load_example_preview.json...
-Converting litegraph workflow to prompt format...
   [ComfyUI] [32m[INFO][0m Using RAM pressure cache.
+Converting litegraph workflow to prompt format...
 Queuing workflow: /Users/runner/work/ComfyUI-Recgen/ComfyUI-Recgen/workflows/load_example_preview.json...
-[DEBUG] Connecting WebSocket to ws://127.0.0.1:41886/ws?clientId=7afdd2b7-fb22-4517-aad9-6c9084546d30
+[DEBUG] Connecting WebSocket to ws://127.0.0.1:41893/ws?clientId=615182ca-a0dc-4015-be90-86e4f72e9d8d
 [DEBUG] WebSocket connected successfully
   [ComfyUI] [32m[INFO][0m got prompt
-Queued with ID: b4eb23c6-91cc-4f68-ba2b-a3cdbfaa2fca
-[DEBUG] WS msg: type=status prompt_id=None (waiting for b4eb23c6-91cc-4f68-ba2b-a3cdbfaa2fca)
-[DEBUG] WS msg: type=status prompt_id=None (waiting for b4eb23c6-91cc-4f68-ba2b-a3cdbfaa2fca)
-[DEBUG] WS msg: type=status prompt_id=None (waiting for b4eb23c6-91cc-4f68-ba2b-a3cdbfaa2fca)
-[DEBUG] WS msg: type=progress_state prompt_id=b4eb23c6-91cc-4f68-ba2b-a3cdbfaa2fca (waiting for b4eb23c6-91cc-4f68-ba2b-a3cdbfaa2fca)
+Queued with ID: 4e2df8a6-649e-4682-82d2-ccced9ac4093
+[DEBUG] WS msg: type=status prompt_id=None (waiting for 4e2df8a6-649e-4682-82d2-ccced9ac4093)
+[DEBUG] WS msg: type=status prompt_id=None (waiting for 4e2df8a6-649e-4682-82d2-ccced9ac4093)
+[DEBUG] WS msg: type=status prompt_id=None (waiting for 4e2df8a6-649e-4682-82d2-ccced9ac4093)
+[DEBUG] WS msg: type=progress_state prompt_id=4e2df8a6-649e-4682-82d2-ccced9ac4093 (waiting for 4e2df8a6-649e-4682-82d2-ccced9ac4093)
 [DEBUG] Unhandled msg_type: progress_state
-[DEBUG] WS msg: type=progress_state prompt_id=b4eb23c6-91cc-4f68-ba2b-a3cdbfaa2fca (waiting for b4eb23c6-91cc-4f68-ba2b-a3cdbfaa2fca)
+[DEBUG] WS msg: type=progress_state prompt_id=4e2df8a6-649e-4682-82d2-ccced9ac4093 (waiting for 4e2df8a6-649e-4682-82d2-ccced9ac4093)
 [DEBUG] Unhandled msg_type: progress_state
-[DEBUG] WS msg: type=progress_state prompt_id=b4eb23c6-91cc-4f68-ba2b-a3cdbfaa2fca (waiting for b4eb23c6-91cc-4f68-ba2b-a3cdbfaa2fca)
+[DEBUG] WS msg: type=progress_state prompt_id=4e2df8a6-649e-4682-82d2-ccced9ac4093 (waiting for 4e2df8a6-649e-4682-82d2-ccced9ac4093)
 [DEBUG] Unhandled msg_type: progress_state
-[DEBUG] WS msg: type=progress_state prompt_id=b4eb23c6-91cc-4f68-ba2b-a3cdbfaa2fca (waiting for b4eb23c6-91cc-4f68-ba2b-a3cdbfaa2fca)
+[DEBUG] WS msg: type=progress_state prompt_id=4e2df8a6-649e-4682-82d2-ccced9ac4093 (waiting for 4e2df8a6-649e-4682-82d2-ccced9ac4093)
 [DEBUG] Unhandled msg_type: progress_state
-[DEBUG] WS msg: type=status prompt_id=None (waiting for b4eb23c6-91cc-4f68-ba2b-a3cdbfaa2fca)
-  [ComfyUI] [32m[INFO][0m [32mPrompt executed in 0.23 seconds[0m
+[DEBUG] WS msg: type=status prompt_id=None (waiting for 4e2df8a6-649e-4682-82d2-ccced9ac4093)
+  [ComfyUI] [32m[INFO][0m [32mPrompt executed in 0.14 seconds[0m
 Execution complete (queue empty)
 Workflow completed successfully!
     Saved screenshot: load_example_preview_executed.png
