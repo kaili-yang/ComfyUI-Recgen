@@ -16,7 +16,7 @@ permissions:
   id-token: write
 
 jobs:
-  linux-cpu:
+  linux_cpu:
     runs-on: ubuntu-latest
     env:
       COMFY_TEST_LOGS_DIR: ${{ runner.temp }}/comfy-test-logs
@@ -38,7 +38,7 @@ jobs:
           if-no-files-found: warn
           include-hidden-files: true
 
-  macos-cpu:
+  macos_cpu:
     runs-on: macos-latest
     env:
       COMFY_TEST_LOGS_DIR: ${{ runner.temp }}/comfy-test-logs
@@ -60,7 +60,7 @@ jobs:
           if-no-files-found: warn
           include-hidden-files: true
 
-  windows-cpu:
+  windows_cpu:
     runs-on: windows-latest
     env:
       COMFY_TEST_LOGS_DIR: ${{ runner.temp }}/comfy-test-logs
@@ -83,8 +83,8 @@ jobs:
           include-hidden-files: true
 
   publish:
-    needs: [linux-cpu, macos-cpu, windows-cpu]
-    if: github.event_name != 'pull_request' && needs['linux-cpu'].result == 'success' && needs['macos-cpu'].result == 'success' && needs['windows-cpu'].result == 'success'
+    needs: [linux_cpu, macos_cpu, windows_cpu]
+    if: github.event_name != 'pull_request' && needs.linux_cpu.result == 'success' && needs.macos_cpu.result == 'success' && needs.windows_cpu.result == 'success'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
