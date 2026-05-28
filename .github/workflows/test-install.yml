@@ -1,3 +1,7 @@
+# ComfyUI-Recgen install tests via comfy-test (PyPI).
+# Does not use PozzettiAndrea/comfy-test test-matrix@main because that workflow
+# calls `comfy-test run --server-url`, which is not in comfy-test 0.3.113 on PyPI.
+
 name: Test Installation
 
 on:
@@ -6,13 +10,117 @@ on:
   pull_request:
     branches: [main, master]
 
-# Required for comfy-test to push the gh-pages branch (report site).
 permissions:
   contents: write
   pages: write
   id-token: write
 
+env:
+  COMFY_TEST_LOGS_DIR: ${{ github.workspace }}/comfy-test-logs
+  COMFY_TEST_WORKSPACE_DIR: ${{ github.workspace }}/comfy-test-workspaces
+
 jobs:
-  test:
-    uses: PozzettiAndrea/comfy-test/.github/workflows/test-matrix.yml@main
-    secrets: inherit
+  linux-cpu:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install comfy-test
+        run: pip install "comfy-test>=0.3.113"
+      - name: Run comfy-test through registration
+        run: comfy-test run --level registration -b ${{ github.ref_name }} --force
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: results-linux-cpu
+          path: ${{ env.COMFY_TEST_LOGS_DIR }}/
+          if-no-files-found: warn
+          include-hidden-files: true
+
+  macos-cpu:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install comfy-test
+        run: pip install "comfy-test>=0.3.113"
+      - name: Run comfy-test through registration
+        run: comfy-test run --level registration -b ${{ github.ref_name }} --force
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: results-macos-cpu
+          path: ${{ env.COMFY_TEST_LOGS_DIR }}/
+          if-no-files-found: warn
+          include-hidden-files: true
+
+  windows-cpu:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install comfy-test
+        run: pip install "comfy-test>=0.3.113"
+      - name: Run comfy-test through registration
+        run: comfy-test run --level registration -b ${{ github.ref_name }} --force
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: results-windows-cpu
+          path: ${{ env.COMFY_TEST_LOGS_DIR }}/
+          if-no-files-found: warn
+          include-hidden-files: true
+
+  publish:
+    needs: [linux-cpu, macos-cpu, windows-cpu]
+    if: always() && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install "comfy-test>=0.3.113"
+      - uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+      - name: Prepare gh-pages
+        env:
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          mkdir -p gh-pages
+          TARGET="gh-pages/$BRANCH"
+          mkdir -p "$TARGET"
+          for dir in artifacts/results-*; do
+            [ -d "$dir" ] || continue
+            PLATFORM_ID=$(basename "$dir" | sed 's/results-//')
+            DEST="$TARGET/$PLATFORM_ID"
+            echo "Updating $PLATFORM_ID"
+            rm -rf "$DEST"
+            mkdir -p "$DEST"
+            RESULTS_JSON=$(find "$dir" -name results.json -type f | head -1)
+            if [ -n "$RESULTS_JSON" ]; then
+              SRC=$(dirname "$RESULTS_JSON")
+              cp -r "$SRC"/. "$DEST/"
+            else
+              echo "Skipping $PLATFORM_ID: no results.json"
+            fi
+          done
+          touch gh-pages/.nojekyll
+      - name: Generate index pages
+        run: |
+          comfy-test generate-index "gh-pages/${{ github.ref_name }}" --repo-name "${{ github.repository }}"
+          comfy-test generate-root-index gh-pages --repo-name "${{ github.repository }}"
+      - name: Publish to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: gh-pages
+          force_orphan: true
