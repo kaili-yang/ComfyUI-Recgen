@@ -19,6 +19,13 @@ def test_recgen_node_metadata():
     assert "IMAGE" in RecGen2DTo3DNode.RETURN_TYPES
 
 
+def test_recgen2d_input_types_without_recgen_runtime():
+    """INPUT_TYPES must not import recgen_inference (object_info queries all nodes)."""
+    types = RecGen2DTo3DNode.INPUT_TYPES()
+    checkpoints = types["required"]["checkpoint"][0]
+    assert "recgen_base.multiview_stereo" in checkpoints
+
+
 def test_intrinsics_for_smoke_resolution():
     fx, fy, cx, cy = intrinsics_for_size(256, 256)
     assert fx == fy == 256.0

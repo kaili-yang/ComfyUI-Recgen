@@ -217,12 +217,15 @@ class RecGen2DTo3DNode:
 
     @classmethod
     def INPUT_TYPES(s):
-        build_recgen, _ = _ensure_recgen_imported()
-        # We try to load checkpoints dynamically, default to "recgen_base.multiview_stereo" if it fails
-        try:
-            checkpoints = build_recgen.list_checkpoints()
-        except Exception:
-            checkpoints = ["recgen_base.multiview_stereo"]
+        # Do not import recgen_inference here: ComfyUI calls INPUT_TYPES for every
+        # registered node during /object_info and workflow conversion, even when the
+        # workflow only uses other nodes (e.g. load_example_preview).
+        checkpoints = ["recgen_base.multiview_stereo"]
+        if _build_recgen is not None:
+            try:
+                checkpoints = _build_recgen.list_checkpoints()
+            except Exception:
+                pass
             
         # Dynamically determine the best default hardware accelerator for the system
         if torch.cuda.is_available():
