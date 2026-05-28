@@ -25,11 +25,11 @@ jobs:
           python-version: "3.11"
       - name: Install comfy-test
         run: pip install "comfy-test>=0.3.113"
-      - name: Run comfy-test through execution_light
+      - name: Run comfy-test (validation + execution_light)
         env:
           COMFY_TEST_LOGS_DIR: ${{ runner.temp }}/comfy-test-logs
           COMFY_TEST_WORKSPACE_DIR: ${{ runner.temp }}/comfy-test-workspaces
-        run: comfy-test run --level execution_light -b ${{ github.ref_name }} --force
+        run: comfy-test run -b ${{ github.ref_name }} --force
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -47,11 +47,11 @@ jobs:
           python-version: "3.11"
       - name: Install comfy-test
         run: pip install "comfy-test>=0.3.113"
-      - name: Run comfy-test through execution_light
+      - name: Run comfy-test (validation + execution_light)
         env:
           COMFY_TEST_LOGS_DIR: ${{ runner.temp }}/comfy-test-logs
           COMFY_TEST_WORKSPACE_DIR: ${{ runner.temp }}/comfy-test-workspaces
-        run: comfy-test run --level execution_light -b ${{ github.ref_name }} --force
+        run: comfy-test run -b ${{ github.ref_name }} --force
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -69,11 +69,11 @@ jobs:
           python-version: "3.11"
       - name: Install comfy-test
         run: pip install "comfy-test>=0.3.113"
-      - name: Run comfy-test through execution_light
+      - name: Run comfy-test (validation + execution_light)
         env:
           COMFY_TEST_LOGS_DIR: ${{ runner.temp }}/comfy-test-logs
           COMFY_TEST_WORKSPACE_DIR: ${{ runner.temp }}/comfy-test-workspaces
-        run: comfy-test run --level execution_light -b ${{ github.ref_name }} --force
+        run: comfy-test run -b ${{ github.ref_name }} --force
       - uses: actions/upload-artifact@v4
         if: always()
         with:

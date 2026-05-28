@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -16,6 +17,23 @@ def _node_root() -> Path:
 
 def _vendor_recgen() -> Path:
     return _node_root() / "vendor" / "recgen"
+
+
+def _comfyui_root() -> Path:
+    """ComfyUI root when install.py runs from custom_nodes/ComfyUI-Recgen/."""
+    return _node_root().parent.parent
+
+
+def _stage_test_3d_assets() -> None:
+    """Copy bundled test OBJ into ComfyUI input/3d for Load3D workflows."""
+    cube_src = _node_root() / "workflows" / "tests" / "assets" / "cube.obj"
+    if not cube_src.is_file():
+        return
+    input_3d = _comfyui_root() / "input" / "3d"
+    input_3d.mkdir(parents=True, exist_ok=True)
+    dest = input_3d / "cube.obj"
+    shutil.copy2(cube_src, dest)
+    print(f"[ComfyUI-Recgen] Staged test 3D model at input/3d/cube.obj")
 
 
 def _pip_install(*args: str) -> None:
@@ -54,6 +72,7 @@ def ensure_recgen() -> Path:
     _pip_install("-e", str(node_root))
     print(f"[ComfyUI-Recgen] Installing recgen_inference from {recgen} ...")
     _pip_install("-e", str(recgen))
+    _stage_test_3d_assets()
     return recgen
 
 

@@ -5,12 +5,13 @@
 [test]
 comfyui_version = "latest"
 python_version = "3.11"
-# Phase 1 CI: install + registration (stable on CPU runners).
-# Add static_capture + validation after Playwright/screenshots are reliable in CI.
+# CI runs validation + execution_light (see test-install.yml; no --level override).
 levels = [
   "syntax",
   "install",
   "registration",
+  "validation",
+  "execution_light",
 ]
 
 [test.platforms]
@@ -21,8 +22,8 @@ windows_portable = false
 
 [test.workflows]
 timeout = 300
-# Lightweight: load bundled example RGB only (no RecGen weights).
-cpu = ["load_example_preview.json"]
+# Consumer: RecGen example preview. Dev test: bundled cube.obj + Load3D/Preview3D.
+cpu = ["load_example_preview.json", "preview3d_cube.json"]
 # Full 2D→3D smoke — self-hosted GPU runners only (downloads HF weights).
 gpu = ["recgen_smoke.json"]
 
