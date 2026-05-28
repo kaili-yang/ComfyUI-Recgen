@@ -84,7 +84,7 @@ jobs:
 
   publish:
     needs: [linux_cpu, macos_cpu, windows_cpu]
-    if: github.event_name != 'pull_request' && needs.linux_cpu.result == 'success' && needs.macos_cpu.result == 'success' && needs.windows_cpu.result == 'success'
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
