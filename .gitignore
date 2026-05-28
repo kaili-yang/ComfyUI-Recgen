@@ -115,3 +115,5 @@ yarn-error.log*
 node.zip
 .vscode/
 .claude/
+comfy-test-logs/
+comfy-test-workspaces/
