@@ -22,7 +22,7 @@ windows_portable = false
 
 [test.workflows]
 timeout = 300
-# Consumer: RecGen example preview. Dev test: bundled cube.obj + Load3D/Preview3D.
+# Consumer: RecGen example preview. Dev test: bundled cube.obj via Preview3D (path widget).
 cpu = ["load_example_preview.json", "preview3d_cube.json"]
 # Full 2D→3D smoke — self-hosted GPU runners only (downloads HF weights).
 gpu = ["recgen_smoke.json"]
