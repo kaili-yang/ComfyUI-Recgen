@@ -19,8 +19,8 @@ jobs:
   linux_cpu:
     runs-on: ubuntu-latest
     env:
-      COMFY_TEST_LOGS_DIR: ${{ runner.temp }}/comfy-test-logs
-      COMFY_TEST_WORKSPACE_DIR: ${{ runner.temp }}/comfy-test-workspaces
+      COMFY_TEST_LOGS_DIR: ${{ github.workspace }}/../comfy-test-logs
+      COMFY_TEST_WORKSPACE_DIR: ${{ github.workspace }}/../comfy-test-workspaces
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -41,8 +41,8 @@ jobs:
   macos_cpu:
     runs-on: macos-latest
     env:
-      COMFY_TEST_LOGS_DIR: ${{ runner.temp }}/comfy-test-logs
-      COMFY_TEST_WORKSPACE_DIR: ${{ runner.temp }}/comfy-test-workspaces
+      COMFY_TEST_LOGS_DIR: ${{ github.workspace }}/../comfy-test-logs
+      COMFY_TEST_WORKSPACE_DIR: ${{ github.workspace }}/../comfy-test-workspaces
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -63,8 +63,8 @@ jobs:
   windows_cpu:
     runs-on: windows-latest
     env:
-      COMFY_TEST_LOGS_DIR: ${{ runner.temp }}/comfy-test-logs
-      COMFY_TEST_WORKSPACE_DIR: ${{ runner.temp }}/comfy-test-workspaces
+      COMFY_TEST_LOGS_DIR: ${{ github.workspace }}/../comfy-test-logs
+      COMFY_TEST_WORKSPACE_DIR: ${{ github.workspace }}/../comfy-test-workspaces
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
