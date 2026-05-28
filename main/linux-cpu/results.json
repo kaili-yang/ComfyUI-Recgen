@@ -1,0 +1,43 @@
+{
+  "timestamp": "2026-05-28T07:05:20.541841+00:00",
+  "platform": "linux",
+  "hardware": {
+    "os": "Linux-6.17.0-1015-azure-x86_64-with-glibc2.39",
+    "cpu": "AMD EPYC 7763 64-Core Processor"
+  },
+  "commit_hash": "789d83e156e37c46304e53ffe068cf9923431a87",
+  "run_url": null,
+  "success": true,
+  "summary": {
+    "total": 2,
+    "passed": 1,
+    "failed": 0
+  },
+  "workflows": [
+    {
+      "name": "load_example_preview",
+      "status": "pass",
+      "duration_seconds": 6.47,
+      "error": null,
+      "hardware": {
+        "os": "Linux-6.17.0-1015-azure-x86_64-with-glibc2.39",
+        "cpu": "AMD EPYC 7763 64-Core Processor"
+      },
+      "resources": {
+        "ram": {
+          "peak": 0.65,
+          "avg": 0.64
+        },
+        "total_ram_gb": 15.6,
+        "samples": 7
+      }
+    },
+    {
+      "name": "recgen_smoke",
+      "status": "skipped",
+      "duration_seconds": 0,
+      "error": "Not configured for CPU runner",
+      "hardware": null
+    }
+  ]
+}

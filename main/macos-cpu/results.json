@@ -1,0 +1,43 @@
+{
+  "timestamp": "2026-05-28T07:05:30.622425+00:00",
+  "platform": "macos",
+  "hardware": {
+    "os": "macOS-15.7.7-arm64-arm-64bit",
+    "cpu": "arm"
+  },
+  "commit_hash": "789d83e156e37c46304e53ffe068cf9923431a87",
+  "run_url": null,
+  "success": true,
+  "summary": {
+    "total": 2,
+    "passed": 1,
+    "failed": 0
+  },
+  "workflows": [
+    {
+      "name": "load_example_preview",
+      "status": "pass",
+      "duration_seconds": 8.2,
+      "error": null,
+      "hardware": {
+        "os": "macOS-15.7.7-arm64-arm-64bit",
+        "cpu": "arm"
+      },
+      "resources": {
+        "ram": {
+          "peak": 0.69,
+          "avg": 0.67
+        },
+        "total_ram_gb": 7.0,
+        "samples": 8
+      }
+    },
+    {
+      "name": "recgen_smoke",
+      "status": "skipped",
+      "duration_seconds": 0,
+      "error": "Not configured for CPU runner",
+      "hardware": null
+    }
+  ]
+}
